@@ -5,14 +5,14 @@ import {postInspectData} from '../utils/api'
 
 export default function StickerInput() {
    const [itemId, setitemId] = useState('0');
-   const [rarity, setRarity] = useState('0');
+   const [rarity, setRarity] = useState('99');
    const [gunIndex, setgunIndex] = useState('0');
    const [skinIndex, setskinIndex] = useState('0');
-   const [nameTag, setNameTag] = useState('0');
+   const [nameTag, setNameTag] = useState('');
    const [statTrak, setStatTrak] = useState(false);
-   const [statTrakCount, setStatTrakCount] = useState('0');
+   const [statTrakCount, setStatTrakCount] = useState('');
    const [pattern, setPattern] = useState('0');
-   const [wear, setWear] = useState('0');
+   const [wear, setWear] = useState('');
    const [charm, setCharm] = useState<Charm>(
       { name: '',pattern:'', x: '', y: '',slot:'' }
    );

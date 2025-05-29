@@ -12,4 +12,5 @@ export interface Charm{
    pattern: string;
    x: string;
    y: string;
+   slot: string;
 }
