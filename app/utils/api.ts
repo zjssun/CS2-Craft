@@ -3,7 +3,7 @@ import type { Charm, Sticker } from '../utils/modleType';
 
 //https://samrol-express.me
 //http://localhost:3000
-axios.defaults.baseURL = 'http://localhost:3000';
+axios.defaults.baseURL = 'http://localhost:8080';
 
 export async function postInspectData(itemId:string, rarity:string,gunIndex:string, skinIndex:string, nameTag:string, statTrak:boolean, statTrakCount:string, pattern:string, wear:string, charm:Charm, stickers:Sticker[]) {
    const inspectData ={
@@ -19,7 +19,7 @@ export async function postInspectData(itemId:string, rarity:string,gunIndex:stri
       charm,
       stickers
    }
-   return axios.post(`/gencode`, inspectData,{
+   return axios.post(`/getItemCode/`, inspectData,{
       headers: {
         'Content-Type': 'application/json',
       },
