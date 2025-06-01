@@ -13,6 +13,9 @@ export default function StickerInput() {
    const [statTrakCount, setStatTrakCount] = useState('');
    const [pattern, setPattern] = useState('0');
    const [wear, setWear] = useState('');
+   const [musicIndex, setMusicIndex] = useState('');
+   const [entIndex, setEntIndex] = useState('');
+   const [petIndex, setPetIndex] = useState('');
    const [charm, setCharm] = useState<Charm>(
       { name: '',pattern:'', x: '', y: '',slot:'' }
    );
@@ -35,7 +38,7 @@ export default function StickerInput() {
    };
    const handleSubmit = (e: React.FormEvent) => {
       e.preventDefault();
-      postInspectData(itemId, rarity,gunIndex, skinIndex, nameTag, statTrak, statTrakCount, pattern, wear, charm, stickers);
+      postInspectData(itemId, rarity,gunIndex, skinIndex, nameTag, statTrak, statTrakCount, pattern, wear, musicIndex, entIndex, petIndex, charm, stickers);
       console.log({
          itemId,
          rarity,
@@ -45,6 +48,9 @@ export default function StickerInput() {
          statTrakCount,
          pattern,
          wear,
+         musicIndex,
+         entIndex,
+         petIndex,
          charm,
          stickers,
       });
@@ -87,6 +93,18 @@ export default function StickerInput() {
          <div>
             <label>Wear:</label>
             <input value={wear} onChange={(e) => setWear(e.target.value)} />
+         </div>
+         <div>
+            <label>Music Index:</label>
+            <input value={musicIndex} onChange={(e) => setMusicIndex(e.target.value)} />
+         </div>
+         <div>
+            <label>Ent Index:</label>
+            <input value={entIndex} onChange={(e) => setEntIndex(e.target.value)} />
+         </div>
+         <div>
+            <label>Pet Index:</label>
+            <input value={petIndex} onChange={(e) => setPetIndex(e.target.value)} />
          </div>
          <div>
             <h4>Charm</h4>
