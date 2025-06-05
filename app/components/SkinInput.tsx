@@ -17,7 +17,7 @@ export default function StickerInput() {
    const [entIndex, setEntIndex] = useState('');
    const [petIndex, setPetIndex] = useState('');
    const [charm, setCharm] = useState<Charm>(
-      { name: '',pattern:'', x: '', y: '',slot:'' }
+      { name: '',pattern:'', x: '',z: '',highlight:'' }
    );
 
    const [stickers, setStickers] = useState<Sticker[]>(
@@ -99,14 +99,6 @@ export default function StickerInput() {
             <input value={musicIndex} onChange={(e) => setMusicIndex(e.target.value)} />
          </div>
          <div>
-            <label>Ent Index:</label>
-            <input value={entIndex} onChange={(e) => setEntIndex(e.target.value)} />
-         </div>
-         <div>
-            <label>Pet Index:</label>
-            <input value={petIndex} onChange={(e) => setPetIndex(e.target.value)} />
-         </div>
-         <div>
             <h4>Charm</h4>
             <div>
                <label>Charm Index:</label>
@@ -130,17 +122,17 @@ export default function StickerInput() {
                />
             </div>
             <div>
-               <label>Charm Y:</label>
+               <label>Charm Z:</label>
                <input
-                  value={charm.y}
-                  onChange={(e) => setCharm({ ...charm, y: e.target.value })}
+                  value={charm.z}
+                  onChange={(e) => setCharm({ ...charm, z: e.target.value })}
                />
             </div>
             <div>
-               <label>Charm Slot:</label>
+               <label>Charm Highlight:</label>
                <input
-                  value={charm.slot}
-                  onChange={(e) => setCharm({ ...charm, slot: e.target.value })}
+                  value={charm.highlight}
+                  onChange={(e) => setCharm({ ...charm, highlight: e.target.value })}
                />
             </div>
          </div>
@@ -186,7 +178,7 @@ export default function StickerInput() {
                <div>
                   <label>贴纸槽位:</label>
                   <input
-                     value={sticker.slot}
+                     value={index==4?sticker.slot="0":sticker.slot}
                      onChange={(e) => handleStickerChange(index, 'slot', e.target.value)}
                   />
                </div>
