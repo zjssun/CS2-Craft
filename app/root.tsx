@@ -9,6 +9,7 @@ import {
 
 import type { Route } from "./+types/root";
 import "./css/app.css";
+import "./utils/i18n"
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },

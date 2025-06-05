@@ -10,6 +10,7 @@ export const rarity_ids = {
   "99": "Gold"
 }
 
+
 export const rarity_sticker_rarity = {
   "3": "High Grade",
   "4": "Remarkable",
