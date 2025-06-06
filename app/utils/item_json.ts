@@ -18,6 +18,13 @@ export const rarity_sticker_rarity = {
   "6": "Extraordinary"
 }
 
+export const rarity_agent = {
+  "3":"Distinguished",
+  "5":"Superior",
+  "4":"Exceptional",
+  "6":"Master"
+}
+
 export const gun_skin = {
   "weapon_ak47": [
     { "name": "Default", "id": "0", "rarity": "Stock", "thumbnail": "/assets/guns/ak47/weapon_ak47.png" },
@@ -122,7 +129,7 @@ export const gun_skin = {
     { "name": "Rose Hex", "id": "1319", "rarity": "Mil-Spec Grade", "thumbnail": "/assets/guns/m4a1s/RoseHex.webp" },
   ],
   "weapon_m4a1": [
-    { "name": "Default", "id": 0, "rarity": "default", "thumbnail": "/assets/guns/m4a1/Default.png" },
+    { "name": "Default", "id": "0", "rarity": "default", "thumbnail": "/assets/guns/m4a1/Default.png" },
     { "name": "Desert Storm", "id": "8", "rarity": "Industrial Grade", "thumbnail": "/assets/guns/m4a1/DesertStorm.webp" },
     { "name": "Jungle Tiger", "id": "16", "rarity": "Industrial Grade", "thumbnail": "/assets/guns/m4a1/JungleTiger.webp" },
     { "name": "Urban DDPAT", "id": "17", "rarity": "Industrial Grade", "thumbnail": "/assets/guns/m4a1/UrbanDDPAT.webp" },
@@ -10646,7 +10653,7 @@ export const knife = {
     { "name": "★ Shadow Daggers | Fade", "id": "38", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_push_aa_fade_light_png.webp" },
     { "name": "★ Shadow Daggers | Crimson Web", "id": "12", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_push_hy_webs_light_png.webp" },
     { "name": "★ Shadow Daggers | Forest DDPAT", "id": "5", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_push_hy_ddpat_light_png.webp" },
-    { "name": "★ Shadow Daggers | Vanilla", "id": 0, "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_knife_push_png.webp" }
+    { "name": "★ Shadow Daggers | Vanilla", "id": "0", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_knife_push_png.webp" }
   ],
   "weapon_knife_tactical": [
     { "name": "★ Huntsman Knife | Autotronic", "id": "1117", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_tactical_gs_huntsman_autotronic_light_png.webp" },
@@ -10683,7 +10690,7 @@ export const knife = {
     { "name": "★ Huntsman Knife | Fade", "id": "38", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_tactical_aa_fade_light_png.webp" },
     { "name": "★ Huntsman Knife | Crimson Web", "id": "12", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_tactical_hy_webs_light_png.webp" },
     { "name": "★ Huntsman Knife | Forest DDPAT", "id": "5", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_tactical_hy_ddpat_light_png.webp" },
-    { "name": "★ Huntsman Knife | Vanilla", "id": 0, "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_knife_tactical_png.webp" }
+    { "name": "★ Huntsman Knife | Vanilla", "id": "0", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_knife_tactical_png.webp" }
   ],
   "weapon_knife_falchion": [
     { "name": "★ Falchion Knife | Autotronic", "id": "1116", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_falchion_gs_falchion_autotronic_light_png.webp" },
@@ -10720,7 +10727,7 @@ export const knife = {
     { "name": "★ Falchion Knife | Fade", "id": "38", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_falchion_aa_fade_light_png.webp" },
     { "name": "★ Falchion Knife | Crimson Web", "id": "12", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_falchion_hy_webs_light_png.webp" },
     { "name": "★ Falchion Knife | Forest DDPAT", "id": "5", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_falchion_hy_ddpat_light_png.webp" },
-    { "name": "★ Falchion Knife | Vanilla", "id": 0, "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_knife_falchion_png.webp" }
+    { "name": "★ Falchion Knife | Vanilla", "id": "0", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_knife_falchion_png.webp" }
   ],
   "weapon_knife_butterfly": [
     { "name": "★ Butterfly Knife | Autotronic", "id": "1115", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_butterfly_gs_butterfly_autotronic_light_png.webp" },
@@ -10757,7 +10764,7 @@ export const knife = {
     { "name": "★ Butterfly Knife | Fade", "id": "38", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_butterfly_aa_fade_light_png.webp" },
     { "name": "★ Butterfly Knife | Crimson Web", "id": "12", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_butterfly_hy_webs_light_png.webp" },
     { "name": "★ Butterfly Knife | Forest DDPAT", "id": "5", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_butterfly_hy_ddpat_light_png.webp" },
-    { "name": "★ Butterfly Knife | Vanilla", "id": 0, "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_knife_butterfly_png.webp" }
+    { "name": "★ Butterfly Knife | Vanilla", "id": "0", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_knife_butterfly_png.webp" }
   ],
   "weapon_knife_survival_bowie": [
     { "name": "★ Bowie Knife | Autotronic", "id": "1114", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_survival_bowie_gs_bowie_autotronic_light_png.webp" },
@@ -10794,7 +10801,7 @@ export const knife = {
     { "name": "★ Bowie Knife | Fade", "id": "38", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_survival_bowie_aa_fade_light_png.webp" },
     { "name": "★ Bowie Knife | Crimson Web", "id": "12", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_survival_bowie_hy_webs_light_png.webp" },
     { "name": "★ Bowie Knife | Forest DDPAT", "id": "5", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_survival_bowie_hy_ddpat_light_png.webp" },
-    { "name": "★ Bowie Knife | Vanilla", "id": 0, "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_knife_survival_bowie_png.webp" }
+    { "name": "★ Bowie Knife | Vanilla", "id": "0", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_knife_survival_bowie_png.webp" }
   ],
   "weapon_knife_widowmaker": [
     { "name": "★ Talon Knife | Damascus Steel", "id": "858", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_widowmaker_aq_damascus_widow_light_png.webp" },
@@ -10821,7 +10828,7 @@ export const knife = {
     { "name": "★ Talon Knife | Fade", "id": "38", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_widowmaker_aa_fade_light_png.webp" },
     { "name": "★ Talon Knife | Crimson Web", "id": "12", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_widowmaker_hy_webs_light_png.webp" },
     { "name": "★ Talon Knife | Forest DDPAT", "id": "5", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_widowmaker_hy_ddpat_light_png.webp" },
-    { "name": "★ Talon Knife | Vanilla", "id": 0, "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_knife_widowmaker_png.webp" }
+    { "name": "★ Talon Knife | Vanilla", "id": "0", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_knife_widowmaker_png.webp" }
   ],
   "weapon_knife_stiletto": [
     { "name": "★ Stiletto Knife | Damascus Steel", "id": "857", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_stiletto_aq_damascus_prisma_light_png.webp" },
@@ -10848,7 +10855,7 @@ export const knife = {
     { "name": "★ Stiletto Knife | Fade", "id": "38", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_stiletto_aa_fade_light_png.webp" },
     { "name": "★ Stiletto Knife | Crimson Web", "id": "12", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_stiletto_hy_webs_light_png.webp" },
     { "name": "★ Stiletto Knife | Forest DDPAT", "id": "5", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_stiletto_hy_ddpat_light_png.webp" },
-    { "name": "★ Stiletto Knife | Vanilla", "id": 0, "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_knife_stiletto_png.webp" }
+    { "name": "★ Stiletto Knife | Vanilla", "id": "0", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_knife_stiletto_png.webp" }
   ],
   "weapon_knife_gypsy_jackknife": [
     { "name": "★ Navaja Knife | Damascus Steel", "id": "857", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_gypsy_jackknife_aq_damascus_prisma_light_png.webp" },
@@ -10875,7 +10882,7 @@ export const knife = {
     { "name": "★ Navaja Knife | Fade", "id": "38", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_gypsy_jackknife_aa_fade_light_png.webp" },
     { "name": "★ Navaja Knife | Crimson Web", "id": "12", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_gypsy_jackknife_hy_webs_light_png.webp" },
     { "name": "★ Navaja Knife | Forest DDPAT", "id": "5", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_gypsy_jackknife_hy_ddpat_light_png.webp" },
-    { "name": "★ Navaja Knife | Vanilla", "id": 0, "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_knife_gypsy_jackknife_png.webp" }
+    { "name": "★ Navaja Knife | Vanilla", "id": "0", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_knife_gypsy_jackknife_png.webp" }
   ],
   "weapon_knife_ursus": [
     { "name": "★ Ursus Knife | Damascus Steel", "id": "857", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_ursus_aq_damascus_prisma_light_png.webp" },
@@ -10902,7 +10909,7 @@ export const knife = {
     { "name": "★ Ursus Knife | Fade", "id": "38", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_ursus_aa_fade_light_png.webp" },
     { "name": "★ Ursus Knife | Crimson Web", "id": "12", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_ursus_hy_webs_light_png.webp" },
     { "name": "★ Ursus Knife | Forest DDPAT", "id": "5", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_ursus_hy_ddpat_light_png.webp" },
-    { "name": "★ Ursus Knife | Vanilla", "id": 0, "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_knife_ursus_png.webp" }
+    { "name": "★ Ursus Knife | Vanilla", "id": "0", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_knife_ursus_png.webp" }
   ],
   "weapon_knife_kukri": [
     { "name": "★ Kukri Knife | Night Stripe", "id": "735", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_kukri_sp_nightstripe_light_png.webp" },
@@ -10917,7 +10924,7 @@ export const knife = {
     { "name": "★ Kukri Knife | Fade", "id": "38", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_kukri_aa_fade_light_png.webp" },
     { "name": "★ Kukri Knife | Crimson Web", "id": "12", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_kukri_hy_webs_light_png.webp" },
     { "name": "★ Kukri Knife | Forest DDPAT", "id": "5", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_kukri_hy_ddpat_light_png.webp" },
-    { "name": "★ Kukri Knife | Vanilla", "id": 0, "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_knife_kukri_png.webp" }
+    { "name": "★ Kukri Knife | Vanilla", "id": "0", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_knife_kukri_png.webp" }
   ],
   "weapon_knife_skeleton": [
     { "name": "★ Skeleton Knife | Night Stripe", "id": "735", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_skeleton_sp_nightstripe_light_png.webp" },
@@ -10944,7 +10951,7 @@ export const knife = {
     { "name": "★ Skeleton Knife | Fade", "id": "38", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_skeleton_aa_fade_light_png.webp" },
     { "name": "★ Skeleton Knife | Crimson Web", "id": "12", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_skeleton_hy_webs_light_png.webp" },
     { "name": "★ Skeleton Knife | Forest DDPAT", "id": "5", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_skeleton_hy_ddpat_light_png.webp" },
-    { "name": "★ Skeleton Knife | Vanilla", "id": 0, "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_knife_skeleton_png.webp" }
+    { "name": "★ Skeleton Knife | Vanilla", "id": "0", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_knife_skeleton_png.webp" }
   ],
   "weapon_knife_outdoor": [
     { "name": "★ Nomad Knife | Night Stripe", "id": "735", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_outdoor_sp_nightstripe_light_png.webp" },
@@ -10971,7 +10978,7 @@ export const knife = {
     { "name": "★ Nomad Knife | Fade", "id": "38", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_outdoor_aa_fade_light_png.webp" },
     { "name": "★ Nomad Knife | Crimson Web", "id": "12", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_outdoor_hy_webs_light_png.webp" },
     { "name": "★ Nomad Knife | Forest DDPAT", "id": "5", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_outdoor_hy_ddpat_light_png.webp" },
-    { "name": "★ Nomad Knife | Vanilla", "id": 0, "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_knife_outdoor_png.webp" }
+    { "name": "★ Nomad Knife | Vanilla", "id": "0", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_knife_outdoor_png.webp" }
   ],
   "weapon_knife_canis": [
     { "name": "★ Survival Knife | Night Stripe", "id": "735", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_canis_sp_nightstripe_light_png.webp" },
@@ -10998,7 +11005,7 @@ export const knife = {
     { "name": "★ Survival Knife | Fade", "id": "38", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_canis_aa_fade_light_png.webp" },
     { "name": "★ Survival Knife | Crimson Web", "id": "12", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_canis_hy_webs_light_png.webp" },
     { "name": "★ Survival Knife | Forest DDPAT", "id": "5", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_canis_hy_ddpat_light_png.webp" },
-    { "name": "★ Survival Knife | Vanilla", "id": 0, "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_knife_canis_png.webp" }
+    { "name": "★ Survival Knife | Vanilla", "id": "0", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_knife_canis_png.webp" }
   ],
   "weapon_knife_cord": [
     { "name": "★ Paracord Knife | Night Stripe", "id": "735", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_cord_sp_nightstripe_light_png.webp" },
@@ -11025,7 +11032,7 @@ export const knife = {
     { "name": "★ Paracord Knife | Fade", "id": "38", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_cord_aa_fade_light_png.webp" },
     { "name": "★ Paracord Knife | Crimson Web", "id": "12", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_cord_hy_webs_light_png.webp" },
     { "name": "★ Paracord Knife | Forest DDPAT", "id": "5", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_cord_hy_ddpat_light_png.webp" },
-    { "name": "★ Paracord Knife | Vanilla", "id": 0, "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_knife_cord_png.webp" }
+    { "name": "★ Paracord Knife | Vanilla", "id": "0", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_knife_cord_png.webp" }
   ],
   "weapon_knife_css": [
     { "name": "★ Classic Knife | Night Stripe", "id": "735", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_css_sp_nightstripe_light_png.webp" },
@@ -11040,7 +11047,7 @@ export const knife = {
     { "name": "★ Classic Knife | Fade", "id": "38", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_css_aa_fade_light_png.webp" },
     { "name": "★ Classic Knife | Crimson Web", "id": "12", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_css_hy_webs_light_png.webp" },
     { "name": "★ Classic Knife | Forest DDPAT", "id": "5", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_css_hy_ddpat_light_png.webp" },
-    { "name": "★ Classic Knife | Vanilla", "id": 0, "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_knife_css_png.webp" }
+    { "name": "★ Classic Knife | Vanilla", "id": "0", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_knife_css_png.webp" }
   ],
   "weapon_knife_karambit": [
     { "name": "★ Karambit | Freehand", "id": "582", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_karambit_am_marked_up_fine_light_png.webp" },
@@ -11077,7 +11084,7 @@ export const knife = {
     { "name": "★ Karambit | Fade", "id": "38", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_karambit_aa_fade_light_png.webp" },
     { "name": "★ Karambit | Crimson Web", "id": "12", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_karambit_hy_webs_light_png.webp" },
     { "name": "★ Karambit | Forest DDPAT", "id": "5", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_karambit_hy_ddpat_light_png.webp" },
-    { "name": "★ Karambit | Vanilla", "id": 0, "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_knife_karambit_png.webp" }
+    { "name": "★ Karambit | Vanilla", "id": "0", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_knife_karambit_png.webp" }
   ],
   "weapon_knife_m9_bayonet": [
     { "name": "★ M9 Bayonet | Freehand", "id": "581", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_m9_bayonet_am_marked_up_90_light_png.webp" },
@@ -11114,7 +11121,7 @@ export const knife = {
     { "name": "★ M9 Bayonet | Fade", "id": "38", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_m9_bayonet_aa_fade_light_png.webp" },
     { "name": "★ M9 Bayonet | Crimson Web", "id": "12", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_m9_bayonet_hy_webs_light_png.webp" },
     { "name": "★ M9 Bayonet | Forest DDPAT", "id": "5", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_m9_bayonet_hy_ddpat_light_png.webp" },
-    { "name": "★ M9 Bayonet | Vanilla", "id": 0, "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_knife_m9_bayonet_png.webp" }
+    { "name": "★ M9 Bayonet | Vanilla", "id": "0", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_knife_m9_bayonet_png.webp" }
   ],
   "weapon_knife_gut": [
     { "name": "★ Gut Knife | Freehand", "id": "580", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_gut_am_marked_up_light_png.webp" },
@@ -11151,7 +11158,7 @@ export const knife = {
     { "name": "★ Gut Knife | Fade", "id": "38", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_gut_aa_fade_light_png.webp" },
     { "name": "★ Gut Knife | Crimson Web", "id": "12", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_gut_hy_webs_light_png.webp" },
     { "name": "★ Gut Knife | Forest DDPAT", "id": "5", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_gut_hy_ddpat_light_png.webp" },
-    { "name": "★ Gut Knife | Vanilla", "id": 0, "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_knife_gut_png.webp" }
+    { "name": "★ Gut Knife | Vanilla", "id": "0", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_knife_gut_png.webp" }
   ],
   "weapon_knife_flip": [
     { "name": "★ Flip Knife | Freehand", "id": "580", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_flip_am_marked_up_light_png.webp" },
@@ -11188,7 +11195,7 @@ export const knife = {
     { "name": "★ Flip Knife | Fade", "id": "38", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_flip_aa_fade_light_png.webp" },
     { "name": "★ Flip Knife | Crimson Web", "id": "12", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_flip_hy_webs_light_png.webp" },
     { "name": "★ Flip Knife | Forest DDPAT", "id": "5", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_knife_flip_hy_ddpat_light_png.webp" },
-    { "name": "★ Flip Knife | Vanilla", "id": 0, "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_knife_flip_png.webp" }
+    { "name": "★ Flip Knife | Vanilla", "id": "0", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_knife_flip_png.webp" }
   ],
   "weapon_bayonet": [
     { "name": "★ Bayonet | Freehand", "id": "580", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_bayonet_am_marked_up_light_png.webp" },
@@ -11225,7 +11232,7 @@ export const knife = {
     { "name": "★ Bayonet | Fade", "id": "38", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_bayonet_aa_fade_light_png.webp" },
     { "name": "★ Bayonet | Crimson Web", "id": "12", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_bayonet_hy_webs_light_png.webp" },
     { "name": "★ Bayonet | Forest DDPAT", "id": "5", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/default_generated/weapon_bayonet_hy_ddpat_light_png.webp" },
-    { "name": "★ Bayonet | Vanilla", "id": 0, "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_bayonet_png.webp" }
+    { "name": "★ Bayonet | Vanilla", "id": "0", "rarity": "Covert", "thumbnail": "https://i.cs2inspects.com/images/econ/weapons/base_weapons/weapon_bayonet_png.webp" }
   ]
 }
 
@@ -11270,199 +11277,199 @@ export const key_charm = {
 
 export const agent = {
   "4613": [
-    { "name": "Bloody Darryl The Strapped | The Professionals", "id": 0, "rarity": "Superior", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_professional_varf5_png.webp" }
+    { "name": "Bloody Darryl The Strapped | The Professionals", "id": "0", "rarity": "Superior", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_professional_varf5_png.webp" }
   ],
   "4619": [
-    { "name": "'Blueberries' Buckshot | NSWC SEAL", "id": 0, "rarity": "Exceptional", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_st6_variantj_png.webp" }
+    { "name": "'Blueberries' Buckshot | NSWC SEAL", "id": "0", "rarity": "Exceptional", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_st6_variantj_png.webp" }
   ],
   "4680": [
-    { "name": "'Two Times' McCoy | TACP Cavalry", "id": 0, "rarity": "Superior", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_st6_variantl_png.webp" }
+    { "name": "'Two Times' McCoy | TACP Cavalry", "id": "0", "rarity": "Superior", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_st6_variantl_png.webp" }
   ],
   "4711": [
-    { "name": "Cmdr. Mae 'Dead Cold' Jamison | SWAT", "id": 0, "rarity": "Master", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_swat_variante_png.webp" }
+    { "name": "Cmdr. Mae 'Dead Cold' Jamison | SWAT", "id": "0", "rarity": "Master", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_swat_variante_png.webp" }
   ],
   "4712": [
-    { "name": "1st Lieutenant Farlow | SWAT", "id": 0, "rarity": "Superior", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_swat_variantf_png.webp" }
+    { "name": "1st Lieutenant Farlow | SWAT", "id": "0", "rarity": "Superior", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_swat_variantf_png.webp" }
   ],
   "4713": [
-    { "name": "John 'Van Healen' Kask | SWAT", "id": 0, "rarity": "Exceptional", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_swat_variantg_png.webp" }
+    { "name": "John 'Van Healen' Kask | SWAT", "id": "0", "rarity": "Exceptional", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_swat_variantg_png.webp" }
   ],
   "4714": [
-    { "name": "Bio-Haz Specialist | SWAT", "id": 0, "rarity": "Distinguished", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_swat_varianth_png.webp" }
+    { "name": "Bio-Haz Specialist | SWAT", "id": "0", "rarity": "Distinguished", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_swat_varianth_png.webp" }
   ],
   "4715": [
-    { "name": "Sergeant Bombson | SWAT", "id": 0, "rarity": "Exceptional", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_swat_varianti_png.webp" }
+    { "name": "Sergeant Bombson | SWAT", "id": "0", "rarity": "Exceptional", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_swat_varianti_png.webp" }
   ],
   "4716": [
-    { "name": "Chem-Haz Specialist | SWAT", "id": 0, "rarity": "Distinguished", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_swat_variantj_png.webp" }
+    { "name": "Chem-Haz Specialist | SWAT", "id": "0", "rarity": "Distinguished", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_swat_variantj_png.webp" }
   ],
   "4718": [
-    { "name": "Rezan the Redshirt | Sabre", "id": 0, "rarity": "Superior", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_balkan_variantk_png.webp" }
+    { "name": "Rezan the Redshirt | Sabre", "id": "0", "rarity": "Superior", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_balkan_variantk_png.webp" }
   ],
   "4726": [
-    { "name": "Sir Bloody Miami Darryl | The Professionals", "id": 0, "rarity": "Master", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_professional_varf_png.webp" }
+    { "name": "Sir Bloody Miami Darryl | The Professionals", "id": "0", "rarity": "Master", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_professional_varf_png.webp" }
   ],
   "4727": [
-    { "name": "Safecracker Voltzmann | The Professionals", "id": 0, "rarity": "Superior", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_professional_varg_png.webp" }
+    { "name": "Safecracker Voltzmann | The Professionals", "id": "0", "rarity": "Superior", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_professional_varg_png.webp" }
   ],
   "4728": [
-    { "name": "Little Kev | The Professionals", "id": 0, "rarity": "Exceptional", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_professional_varh_png.webp" }
+    { "name": "Little Kev | The Professionals", "id": "0", "rarity": "Exceptional", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_professional_varh_png.webp" }
   ],
   "4730": [
-    { "name": "Getaway Sally | The Professionals", "id": 0, "rarity": "Exceptional", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_professional_varj_png.webp" }
+    { "name": "Getaway Sally | The Professionals", "id": "0", "rarity": "Exceptional", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_professional_varj_png.webp" }
   ],
   "4732": [
-    { "name": "Number K | The Professionals", "id": 0, "rarity": "Superior", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_professional_vari_png.webp" }
+    { "name": "Number K | The Professionals", "id": "0", "rarity": "Superior", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_professional_vari_png.webp" }
   ],
   "4733": [
-    { "name": "Sir Bloody Silent Darryl | The Professionals", "id": 0, "rarity": "Master", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_professional_varf1_png.webp" }
+    { "name": "Sir Bloody Silent Darryl | The Professionals", "id": "0", "rarity": "Master", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_professional_varf1_png.webp" }
   ],
   "4734": [
-    { "name": "Sir Bloody Skullhead Darryl | The Professionals", "id": 0, "rarity": "Master", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_professional_varf2_png.webp" }
+    { "name": "Sir Bloody Skullhead Darryl | The Professionals", "id": "0", "rarity": "Master", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_professional_varf2_png.webp" }
   ],
   "4735": [
-    { "name": "Sir Bloody Darryl Royale | The Professionals", "id": 0, "rarity": "Master", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_professional_varf3_png.webp" }
+    { "name": "Sir Bloody Darryl Royale | The Professionals", "id": "0", "rarity": "Master", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_professional_varf3_png.webp" }
   ],
   "4736": [
-    { "name": "Sir Bloody Loudmouth Darryl | The Professionals", "id": 0, "rarity": "Master", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_professional_varf4_png.webp" }
+    { "name": "Sir Bloody Loudmouth Darryl | The Professionals", "id": "0", "rarity": "Master", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_professional_varf4_png.webp" }
   ],
   "4749": [
-    { "name": "Sous-Lieutenant Medic | Gendarmerie Nationale", "id": 0, "rarity": "Exceptional", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_gendarmerie_varianta_png.webp" }
+    { "name": "Sous-Lieutenant Medic | Gendarmerie Nationale", "id": "0", "rarity": "Exceptional", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_gendarmerie_varianta_png.webp" }
   ],
   "4750": [
-    { "name": "Chem-Haz Capitaine | Gendarmerie Nationale", "id": 0, "rarity": "Superior", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_gendarmerie_variantb_png.webp" }
+    { "name": "Chem-Haz Capitaine | Gendarmerie Nationale", "id": "0", "rarity": "Superior", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_gendarmerie_variantb_png.webp" }
   ],
   "4751": [
-    { "name": "Chef d'Escadron Rouchard | Gendarmerie Nationale", "id": 0, "rarity": "Master", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_gendarmerie_variantc_png.webp" }
+    { "name": "Chef d'Escadron Rouchard | Gendarmerie Nationale", "id": "0", "rarity": "Master", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_gendarmerie_variantc_png.webp" }
   ],
   "4752": [
-    { "name": "Aspirant | Gendarmerie Nationale", "id": 0, "rarity": "Distinguished", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_gendarmerie_variantd_png.webp" }
+    { "name": "Aspirant | Gendarmerie Nationale", "id": "0", "rarity": "Distinguished", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_gendarmerie_variantd_png.webp" }
   ],
   "4753": [
-    { "name": "Officer Jacques Beltram | Gendarmerie Nationale", "id": 0, "rarity": "Exceptional", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_gendarmerie_variante_png.webp" }
+    { "name": "Officer Jacques Beltram | Gendarmerie Nationale", "id": "0", "rarity": "Exceptional", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_gendarmerie_variante_png.webp" }
   ],
   "4756": [
-    { "name": "Lieutenant 'Tree Hugger' Farlow | SWAT", "id": 0, "rarity": "Exceptional", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_swat_variantk_png.webp" }
+    { "name": "Lieutenant 'Tree Hugger' Farlow | SWAT", "id": "0", "rarity": "Exceptional", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_swat_variantk_png.webp" }
   ],
   "4757": [
-    { "name": "Cmdr. Davida 'Goggles' Fernandez | SEAL Frogman", "id": 0, "rarity": "Master", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_diver_varianta_png.webp" }
+    { "name": "Cmdr. Davida 'Goggles' Fernandez | SEAL Frogman", "id": "0", "rarity": "Master", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_diver_varianta_png.webp" }
   ],
   "4771": [
-    { "name": "Cmdr. Frank 'Wet Sox' Baroud | SEAL Frogman", "id": 0, "rarity": "Master", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_diver_variantb_png.webp" }
+    { "name": "Cmdr. Frank 'Wet Sox' Baroud | SEAL Frogman", "id": "0", "rarity": "Master", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_diver_variantb_png.webp" }
   ],
   "4772": [
-    { "name": "Lieutenant Rex Krikey | SEAL Frogman", "id": 0, "rarity": "Superior", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_diver_variantc_png.webp" }
+    { "name": "Lieutenant Rex Krikey | SEAL Frogman", "id": "0", "rarity": "Superior", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_diver_variantc_png.webp" }
   ],
   "4773": [
-    { "name": "Elite Trapper Solman | Guerrilla Warfare", "id": 0, "rarity": "Superior", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_jungle_raider_varianta_png.webp" }
+    { "name": "Elite Trapper Solman | Guerrilla Warfare", "id": "0", "rarity": "Superior", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_jungle_raider_varianta_png.webp" }
   ],
   "4774": [
-    { "name": "Crasswater The Forgotten | Guerrilla Warfare", "id": 0, "rarity": "Master", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_jungle_raider_variantb_png.webp" }
+    { "name": "Crasswater The Forgotten | Guerrilla Warfare", "id": "0", "rarity": "Master", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_jungle_raider_variantb_png.webp" }
   ],
   "4775": [
-    { "name": "Arno The Overgrown | Guerrilla Warfare", "id": 0, "rarity": "Superior", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_jungle_raider_variantc_png.webp" }
+    { "name": "Arno The Overgrown | Guerrilla Warfare", "id": "0", "rarity": "Superior", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_jungle_raider_variantc_png.webp" }
   ],
   "4776": [
-    { "name": "Col. Mangos Dabisi | Guerrilla Warfare", "id": 0, "rarity": "Exceptional", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_jungle_raider_variantd_png.webp" }
+    { "name": "Col. Mangos Dabisi | Guerrilla Warfare", "id": "0", "rarity": "Exceptional", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_jungle_raider_variantd_png.webp" }
   ],
   "4777": [
-    { "name": "Vypa Sista of the Revolution | Guerrilla Warfare", "id": 0, "rarity": "Master", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_jungle_raider_variante_png.webp" }
+    { "name": "Vypa Sista of the Revolution | Guerrilla Warfare", "id": "0", "rarity": "Master", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_jungle_raider_variante_png.webp" }
   ],
   "4778": [
-    { "name": "Trapper Aggressor | Guerrilla Warfare", "id": 0, "rarity": "Distinguished", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_jungle_raider_variantf_png.webp" }
+    { "name": "Trapper Aggressor | Guerrilla Warfare", "id": "0", "rarity": "Distinguished", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_jungle_raider_variantf_png.webp" }
   ],
   "4780": [
-    { "name": "'Medium Rare' Crasswater | Guerrilla Warfare", "id": 0, "rarity": "Master", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_jungle_raider_variantb2_png.webp" }
+    { "name": "'Medium Rare' Crasswater | Guerrilla Warfare", "id": "0", "rarity": "Master", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_jungle_raider_variantb2_png.webp" }
   ],
   "4781": [
-    { "name": "Trapper | Guerrilla Warfare", "id": 0, "rarity": "Exceptional", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_jungle_raider_variantf2_png.webp" }
+    { "name": "Trapper | Guerrilla Warfare", "id": "0", "rarity": "Exceptional", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_jungle_raider_variantf2_png.webp" }
   ],
   "5105": [
-    { "name": "Ground Rebel  | Elite Crew", "id": 0, "rarity": "Distinguished", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_leet_variantg_png.webp" }
+    { "name": "Ground Rebel  | Elite Crew", "id": "0", "rarity": "Distinguished", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_leet_variantg_png.webp" }
   ],
   "5106": [
-    { "name": "Osiris | Elite Crew", "id": 0, "rarity": "Exceptional", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_leet_varianth_png.webp" }
+    { "name": "Osiris | Elite Crew", "id": "0", "rarity": "Exceptional", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_leet_varianth_png.webp" }
   ],
   "5107": [
-    { "name": "Prof. Shahmat | Elite Crew", "id": 0, "rarity": "Superior", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_leet_varianti_png.webp" }
+    { "name": "Prof. Shahmat | Elite Crew", "id": "0", "rarity": "Superior", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_leet_varianti_png.webp" }
   ],
   "5108": [
-    { "name": "The Elite Mr. Muhlik | Elite Crew", "id": 0, "rarity": "Master", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_leet_variantf_png.webp" }
+    { "name": "The Elite Mr. Muhlik | Elite Crew", "id": "0", "rarity": "Master", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_leet_variantf_png.webp" }
   ],
   "5109": [
-    { "name": "Jungle Rebel | Elite Crew", "id": 0, "rarity": "Distinguished", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_leet_variantj_png.webp" }
+    { "name": "Jungle Rebel | Elite Crew", "id": "0", "rarity": "Distinguished", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_leet_variantj_png.webp" }
   ],
   "5205": [
-    { "name": "Soldier | Phoenix", "id": 0, "rarity": "Distinguished", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_phoenix_varianth_png.webp" }
+    { "name": "Soldier | Phoenix", "id": "0", "rarity": "Distinguished", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_phoenix_varianth_png.webp" }
   ],
   "5206": [
-    { "name": "Enforcer | Phoenix", "id": 0, "rarity": "Distinguished", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_phoenix_variantf_png.webp" }
+    { "name": "Enforcer | Phoenix", "id": "0", "rarity": "Distinguished", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_phoenix_variantf_png.webp" }
   ],
   "5207": [
-    { "name": "Slingshot | Phoenix", "id": 0, "rarity": "Exceptional", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_phoenix_variantg_png.webp" }
+    { "name": "Slingshot | Phoenix", "id": "0", "rarity": "Exceptional", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_phoenix_variantg_png.webp" }
   ],
   "5208": [
-    { "name": "Street Soldier | Phoenix", "id": 0, "rarity": "Distinguished", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_phoenix_varianti_png.webp" }
+    { "name": "Street Soldier | Phoenix", "id": "0", "rarity": "Distinguished", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_phoenix_varianti_png.webp" }
   ],
   "5305": [
-    { "name": "Operator | FBI SWAT", "id": 0, "rarity": "Distinguished", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_fbi_variantf_png.webp" }
+    { "name": "Operator | FBI SWAT", "id": "0", "rarity": "Distinguished", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_fbi_variantf_png.webp" }
   ],
   "5306": [
-    { "name": "Markus Delrow | FBI HRT", "id": 0, "rarity": "Exceptional", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_fbi_variantg_png.webp" }
+    { "name": "Markus Delrow | FBI HRT", "id": "0", "rarity": "Exceptional", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_fbi_variantg_png.webp" }
   ],
   "5307": [
-    { "name": "Michael Syfers  | FBI Sniper", "id": 0, "rarity": "Superior", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_fbi_varianth_png.webp" }
+    { "name": "Michael Syfers  | FBI Sniper", "id": "0", "rarity": "Superior", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_fbi_varianth_png.webp" }
   ],
   "5308": [
-    { "name": "Special Agent Ava | FBI", "id": 0, "rarity": "Master", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_fbi_variantb_png.webp" }
+    { "name": "Special Agent Ava | FBI", "id": "0", "rarity": "Master", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_fbi_variantb_png.webp" }
   ],
   "5400": [
-    { "name": "3rd Commando Company | KSK", "id": 0, "rarity": "Distinguished", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_st6_variantk_png.webp" }
+    { "name": "3rd Commando Company | KSK", "id": "0", "rarity": "Distinguished", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_st6_variantk_png.webp" }
   ],
   "5401": [
-    { "name": "Seal Team 6 Soldier | NSWC SEAL", "id": 0, "rarity": "Distinguished", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_st6_variante_png.webp" }
+    { "name": "Seal Team 6 Soldier | NSWC SEAL", "id": "0", "rarity": "Distinguished", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_st6_variante_png.webp" }
   ],
   "5402": [
-    { "name": "Buckshot | NSWC SEAL", "id": 0, "rarity": "Exceptional", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_st6_variantg_png.webp" }
+    { "name": "Buckshot | NSWC SEAL", "id": "0", "rarity": "Exceptional", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_st6_variantg_png.webp" }
   ],
   "5403": [
-    { "name": "'Two Times' McCoy | USAF TACP", "id": 0, "rarity": "Superior", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_st6_variantm_png.webp" }
+    { "name": "'Two Times' McCoy | USAF TACP", "id": "0", "rarity": "Superior", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_st6_variantm_png.webp" }
   ],
   "5404": [
-    { "name": "Lt. Commander Ricksaw | NSWC SEAL", "id": 0, "rarity": "Master", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_st6_varianti_png.webp" }
+    { "name": "Lt. Commander Ricksaw | NSWC SEAL", "id": "0", "rarity": "Master", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_st6_varianti_png.webp" }
   ],
   "5405": [
-    { "name": "Primeiro Tenente | Brazilian 1st Battalion", "id": 0, "rarity": "Distinguished", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_st6_variantn_png.webp" }
+    { "name": "Primeiro Tenente | Brazilian 1st Battalion", "id": "0", "rarity": "Distinguished", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_st6_variantn_png.webp" }
   ],
   "5500": [
-    { "name": "Dragomir | Sabre", "id": 0, "rarity": "Exceptional", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_balkan_variantf_png.webp" }
+    { "name": "Dragomir | Sabre", "id": "0", "rarity": "Exceptional", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_balkan_variantf_png.webp" }
   ],
   "5501": [
-    { "name": "Maximus | Sabre", "id": 0, "rarity": "Exceptional", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_balkan_varianti_png.webp" }
+    { "name": "Maximus | Sabre", "id": "0", "rarity": "Exceptional", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_balkan_varianti_png.webp" }
   ],
   "5502": [
-    { "name": "Rezan The Ready | Sabre", "id": 0, "rarity": "Superior", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_balkan_variantg_png.webp" }
+    { "name": "Rezan The Ready | Sabre", "id": "0", "rarity": "Superior", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_balkan_variantg_png.webp" }
   ],
   "5503": [
-    { "name": "Blackwolf | Sabre", "id": 0, "rarity": "Superior", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_balkan_variantj_png.webp" }
+    { "name": "Blackwolf | Sabre", "id": "0", "rarity": "Superior", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_balkan_variantj_png.webp" }
   ],
   "5504": [
-    { "name": "'The Doctor' Romanov | Sabre", "id": 0, "rarity": "Master", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_balkan_varianth_png.webp" }
+    { "name": "'The Doctor' Romanov | Sabre", "id": "0", "rarity": "Master", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_balkan_varianth_png.webp" }
   ],
   "5505": [
-    { "name": "Dragomir | Sabre Footsoldier", "id": 0, "rarity": "Distinguished", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_balkan_variantl_png.webp" }
+    { "name": "Dragomir | Sabre Footsoldier", "id": "0", "rarity": "Distinguished", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_balkan_variantl_png.webp" }
   ],
   "5601": [
-    { "name": "B Squadron Officer | SAS", "id": 0, "rarity": "Distinguished", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_sas_variantf_png.webp" }
+    { "name": "B Squadron Officer | SAS", "id": "0", "rarity": "Distinguished", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_sas_variantf_png.webp" }
   ],
   "5602": [
-    { "name": "D Squadron Officer | NZSAS", "id": 0, "rarity": "Distinguished", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_sas_variantg_png.webp" }
+    { "name": "D Squadron Officer | NZSAS", "id": "0", "rarity": "Distinguished", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_sas_variantg_png.webp" }
   ],
   "5600": [
-    { "name": "CT Agent (Default)", "id": 0, "rarity": null, "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_sas_png.webp" }
+    { "name": "CT Agent (Default)", "id": "0", "rarity": "Distinguished", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_ctm_sas_png.webp" }
   ],
   "5200": [
-    { "name": "T Agent (Default)", "id": 0, "rarity": null, "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_phoenix_png.webp" }
+    { "name": "T Agent (Default)", "id": "0", "rarity": "Distinguished", "thumbnail": "https://i.cs2inspects.com/images/econ/characters/customplayer_tm_phoenix_png.webp" }
   ]
 }
 
