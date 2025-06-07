@@ -58,7 +58,6 @@ const resources = {
   zh: {
     translation: {
       "Weapons":"主、副武器",
-      "Select an option":"选择一个选项",
       "Knife":"匕首",
       "Gloves":"手套",
       "Agent":"探员",
@@ -118,6 +117,9 @@ const resources = {
       "CZ75A":"CZ75-Auto",
       "REVOLVER":"R8 Revolver",
       "DEAGLE":"Desert Eagle",
+      "Name Tag":"名称标签",
+      "Pattern ID":"图案模板",
+      "Wear":"皮肤磨损"
     }
   }
 };
