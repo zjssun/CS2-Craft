@@ -119,7 +119,11 @@ const resources = {
       "DEAGLE":"Desert Eagle",
       "Name Tag":"名称标签",
       "Pattern ID":"图案模板",
-      "Wear":"皮肤磨损"
+      "Wear":"皮肤磨损",
+      "slot":"槽位",
+      "Wear ":"磨损",
+      "Pattern":"模板",
+      "HightLight":"高光ID",
     }
   }
 };

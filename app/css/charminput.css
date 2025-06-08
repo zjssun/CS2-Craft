@@ -1,0 +1,73 @@
+.charminput{
+   padding: 7px;
+   width: 150px;
+   display: grid; 
+   grid-template-columns: 1fr 1fr 1fr 1fr; 
+   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+   gap: 0px 10px;
+   border: 2px solid var(--card-border-color);
+   box-shadow: 4px 4px 0 var(--card-border-color);
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+   justify-items: center;
+   align-items: center;
+   grid-template-areas: 
+   "f f f f"
+   "f f f f"
+   "f f f f"
+   "e e e e"
+   "d d d d"
+   "c c c c"
+   "b b b b";
+   &:hover{
+      transform: translate(-3px, -3px);
+      box-shadow: 8px 8px 0 var(--card-border-color);
+   }
+   &:hover .charminput-plus{
+      transform: rotate(360deg) scale(1.2);
+   }
+}
+.charminput-item{
+   width: 90%;
+   height: 27px;
+   display: flex;
+   align-items: center;
+   overflow: hidden;
+   flex-direction: row;
+   border-bottom: 2px solid var(--select-border);
+   &:has(.charminput-input:focus){
+      border-color: var(--border-active);
+   }
+}
+
+.charminput-label{
+   white-space: nowrap;
+   font-size: var(--small-size);
+   color: var(--text);
+}
+
+.charminput-input{
+   padding: 3px 3px;
+   appearance: none;
+   background-color: var(--background);
+   color: var(--text);
+   border: none;
+   font-size: var(--tiny-size);
+   cursor: pointer;
+   outline: none;
+   transition: all 0.2s ease;
+}
+
+.charminput-image{
+   width: 70%;
+   height: 100%;
+   border: 2px solid var(--select-border);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+   transition: all 0.2s ease;
+   color: var(--text);
+   .charminput-plus{
+      transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+   }
+}

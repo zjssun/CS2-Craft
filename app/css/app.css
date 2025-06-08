@@ -3,7 +3,10 @@
    margin: 0;
    padding: 0;
    font-family: 'Poppins', sans-serif;
+   scrollbar-width: thin;
+   scrollbar-color: var(--lang-color-border) transparent;
 }
+
 :root{
    --tiny-size: 12px;
    --small-size:14px;

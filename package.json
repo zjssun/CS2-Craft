@@ -9,11 +9,13 @@
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "@react-router/node": "^7.5.3",
     "@react-router/serve": "^7.5.3",
     "axios": "^1.9.0",
     "crc": "^4.3.2",
     "google-protobuf": "^3.21.4",
+    "gsap": "^3.13.0",
     "i18next": "^25.2.1",
     "isbot": "^5.1.27",
     "lucide-react": "^0.513.0",

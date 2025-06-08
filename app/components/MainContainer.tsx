@@ -3,8 +3,11 @@ import { useTranslation } from 'react-i18next'
 import { sticker, gun_skin, key_charm, patch, musickit, medal, agent, gloves, knife } from '../utils/item_json'
 import { useEffect, useState } from 'react'
 
-import Itemcard from '../components/Itemcard'
+import Itemcard from './Itemcard'
 import BasicInput from './BasicInput'
+import StickerInput from './StickerInput'
+import CharmInput from './CharmInput'
+
 
 export default function MainContainer() {
    const { t } = useTranslation();
@@ -40,12 +43,12 @@ export default function MainContainer() {
       setSeries(e.target.value);
    }
    // ItemCard Click Handle
-   const CardClick=(cardId: string,index: string)=>{
-      if(activeCardId===cardId){
+   const CardClick = (cardId: string, index: string) => {
+      if (activeCardId === cardId) {
          setActiveCardId(null);
-      }else{
+      } else {
          setActiveCardId(cardId);
-         console.log("CardId:",cardId,"Index:",index);
+         console.log("CardId:", cardId, "Index:", index);
       }
    }
 
@@ -91,7 +94,13 @@ export default function MainContainer() {
             </select>
          </div>
          <div className='craft-panel'>
-               <BasicInput/>
+            <BasicInput />
+            <StickerInput />
+            <StickerInput />
+            <StickerInput />
+            <StickerInput />
+            <StickerInput />
+            <CharmInput />
          </div>
          <div className='item-container'>
             <div className='item-panel-container'>
@@ -122,8 +131,8 @@ export default function MainContainer() {
                         )
                      ))
                   ) : value == 'key_charm' && series ? (
-                     key_charm[series as keyof typeof key_charm].filter((item) => item.name.replace(/^Charm.*?\|/,'').toLowerCase().includes(filter.toLowerCase())).map((item, index) => (
-                        <Itemcard CardClick={CardClick} isActicet={item.id === activeCardId} index={"keychain"} name={item.name.replace(/^Charm.*?\|/,'')} id={item.id} rarity={item.rarity} thumbnail={item.thumbnail} key={item.id} />
+                     key_charm[series as keyof typeof key_charm].filter((item) => item.name.replace(/^Charm.*?\|/, '').toLowerCase().includes(filter.toLowerCase())).map((item, index) => (
+                        <Itemcard CardClick={CardClick} isActicet={item.id === activeCardId} index={"keychain"} name={item.name.replace(/^Charm.*?\|/, '')} id={item.id} rarity={item.rarity} thumbnail={item.thumbnail} key={item.id} />
                      ))
                   ) : value == 'patch' && series ? (
                      patch[series as keyof typeof patch].filter((item) => item.name.toLowerCase().includes(filter.toLowerCase())).map((item, index) => (
