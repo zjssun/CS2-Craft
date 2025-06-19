@@ -1,5 +1,4 @@
 import type { Route } from "./+types/home";
-import SkinInput from "../components/SkinInput";
 import Header from '../components/Header';
 import MainContainer from '../components/MainContainer';
 import { useState,useEffect } from "react";
