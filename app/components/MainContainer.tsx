@@ -15,6 +15,7 @@ export default function MainContainer() {
    const [series, setSeries] = useState('weapon_ak47');
    const [filter, setFilter] = useState('');
    const [activeCardId, setActiveCardId] = useState<string | null>(null);
+   const [isCraftVisible, setIsCraftVisible] = useState(false);
 
    const handleValueChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
       setValue(e.target.value);
@@ -43,12 +44,18 @@ export default function MainContainer() {
       setSeries(e.target.value);
    }
    // ItemCard Click Handle
-   const CardClick = (cardId: string, index: string) => {
+   const CardClick = (catgory:string,cardId: string, index: string) => {
       if (activeCardId === cardId) {
          setActiveCardId(null);
+         setIsCraftVisible(false);
       } else {
          setActiveCardId(cardId);
-         console.log("CardId:", cardId, "Index:", index);
+         console.log("catgory:",catgory,"CardId:", cardId, "Index:", index);
+         if(catgory === 'gun_skin' || catgory === 'knife' || catgory === 'gloves' || catgory === 'agent'){
+            setIsCraftVisible(true);
+         }else{
+            setIsCraftVisible(false);
+         }
       }
    }
 
@@ -110,41 +117,41 @@ export default function MainContainer() {
                {
                   value == 'gun_skin' && series ? (
                      gun_skin[series as keyof typeof gun_skin].filter((item) => item.name.toLowerCase().includes(filter.toLowerCase())).map((item, index) => (
-                        <Itemcard CardClick={CardClick} isActicet={item.id === activeCardId} index={series} name={item.name} id={item.id} rarity={item.rarity} thumbnail={item.thumbnail} key={item.id} />
+                        <Itemcard category='gun_skin' CardClick={CardClick} isActicet={item.id === activeCardId} index={series} name={item.name} id={item.id} rarity={item.rarity} thumbnail={item.thumbnail} key={item.id} />
                      ))
                   ) : value == 'knife' && series ? (
                      knife[series as keyof typeof knife].filter((item) => item.name.replace(/^★ .*? \| /, '').toLowerCase().includes(filter.toLowerCase())).map((item, index) => (
-                        <Itemcard CardClick={CardClick} isActicet={item.id === activeCardId} index={series} name={item.name.replace(/^★ .*? \| /, '')} id={item.id} rarity={item.rarity} thumbnail={item.thumbnail} key={item.id} />
+                        <Itemcard category='knife' CardClick={CardClick} isActicet={item.id === activeCardId} index={series} name={item.name.replace(/^★ .*? \| /, '')} id={item.id} rarity={item.rarity} thumbnail={item.thumbnail} key={item.id} />
                      ))
                   ) : value == 'gloves' && series ? (
                      gloves[series as keyof typeof gloves].filter((item) => item.name.replace(/^★ .*? \| /, '').toLowerCase().includes(filter.toLowerCase())).map((item, index) => (
-                        <Itemcard CardClick={CardClick} isActicet={item.id === activeCardId} index={series} name={item.name.replace(/^★ .*? \| /, '')} id={item.id} rarity={item.rarity} thumbnail={item.thumbnail} key={item.id} />
+                        <Itemcard category='gloves' CardClick={CardClick} isActicet={item.id === activeCardId} index={series} name={item.name.replace(/^★ .*? \| /, '')} id={item.id} rarity={item.rarity} thumbnail={item.thumbnail} key={item.id} />
                      ))
                   ) : value == 'sticker' && series ? (
                      sticker[series as keyof typeof sticker].filter((item) => item.name.toLowerCase().includes(filter.toLowerCase())).map((item, index) => (
-                        <Itemcard CardClick={CardClick} isActicet={item.id === activeCardId} index={"sticker"} name={item.name} id={item.id} rarity={item.rarity} thumbnail={item.thumbnail} key={item.id} />
+                        <Itemcard category='sticker' CardClick={CardClick} isActicet={item.id === activeCardId} index={"sticker"} name={item.name} id={item.id} rarity={item.rarity} thumbnail={item.thumbnail} key={item.id} />
                      ))
                   ) : value == 'agent' ? (
                      Object.entries(agent).flatMap(([agentCollectionId, agentItemsArray]) => agentItemsArray.map(
                         (item, index) => (
-                           <Itemcard CardClick={CardClick} isActicet={agentCollectionId === activeCardId} index={agentCollectionId} name={item.name} id={agentCollectionId} rarity={item.rarity} thumbnail={item.thumbnail} key={agentCollectionId} />
+                           <Itemcard category='agent' CardClick={CardClick} isActicet={agentCollectionId === activeCardId} index={agentCollectionId} name={item.name} id={agentCollectionId} rarity={item.rarity} thumbnail={item.thumbnail} key={agentCollectionId} />
                         )
                      ))
                   ) : value == 'key_charm' && series ? (
                      key_charm[series as keyof typeof key_charm].filter((item) => item.name.replace(/^Charm.*?\|/, '').toLowerCase().includes(filter.toLowerCase())).map((item, index) => (
-                        <Itemcard CardClick={CardClick} isActicet={item.id === activeCardId} index={"keychain"} name={item.name.replace(/^Charm.*?\|/, '')} id={item.id} rarity={item.rarity} thumbnail={item.thumbnail} key={item.id} />
+                        <Itemcard category='key_charm' CardClick={CardClick} isActicet={item.id === activeCardId} index={"keychain"} name={item.name.replace(/^Charm.*?\|/, '')} id={item.id} rarity={item.rarity} thumbnail={item.thumbnail} key={item.id} />
                      ))
                   ) : value == 'patch' && series ? (
                      patch[series as keyof typeof patch].filter((item) => item.name.toLowerCase().includes(filter.toLowerCase())).map((item, index) => (
-                        <Itemcard CardClick={CardClick} isActicet={item.id === activeCardId} index={"patch"} name={item.name} id={item.id} rarity={item.rarity} thumbnail={item.thumbnail} key={item.id} />
+                        <Itemcard category='patch' CardClick={CardClick} isActicet={item.id === activeCardId} index={"patch"} name={item.name} id={item.id} rarity={item.rarity} thumbnail={item.thumbnail} key={item.id} />
                      ))
                   ) : value == 'musickit' && series ? (
                      musickit[series as keyof typeof musickit].filter((item) => item.name.toLowerCase().includes(filter.toLowerCase())).map((item, index) => (
-                        <Itemcard CardClick={CardClick} isActicet={item.id === activeCardId} index={"musickit_default"} name={item.name} id={item.id} rarity={item.rarity} thumbnail={item.thumbnail} key={item.id} />
+                        <Itemcard category='musickit' CardClick={CardClick} isActicet={item.id === activeCardId} index={"musickit_default"} name={item.name} id={item.id} rarity={item.rarity} thumbnail={item.thumbnail} key={item.id} />
                      ))
                   ) : value == 'medal' && series ? (
                      medal[series as keyof typeof medal].filter((item) => item.name.toLowerCase().includes(filter.toLowerCase())).map((item, index) => (
-                        <Itemcard CardClick={CardClick} isActicet={item.id === activeCardId} index={series} name={item.name} id={item.id} rarity={item.rarity} thumbnail={item.thumbnail} key={item.id} />
+                        <Itemcard category='medal' CardClick={CardClick} isActicet={item.id === activeCardId} index={series} name={item.name} id={item.id} rarity={item.rarity} thumbnail={item.thumbnail} key={item.id} />
                      ))
                   ) : null
                }

@@ -40,6 +40,7 @@
 }
 .basicinput-label{
    position: relative;
+   height: 25px;
    overflow: hidden;
    color: var(--text);
    font-size:var(--base-size);
