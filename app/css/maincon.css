@@ -61,6 +61,9 @@
    justify-content: center;
    align-items: center;
    gap: 25px;
+   transition: all 0.3s ease;
+   /* clip-path: polygon(-20% 200%, 200% 200%, 120% -20%, -20% -20%); */
+   /* clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%); */
 }
 
 /* ============= item container =========== */

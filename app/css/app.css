@@ -7,6 +7,11 @@
    scrollbar-color: var(--lang-color-border) transparent;
 }
 
+::selection{
+   background: var(--text);
+   color: var(--background);
+}
+
 :root{
    --tiny-size: 12px;
    --small-size:14px;

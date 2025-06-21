@@ -2,6 +2,7 @@ import '../css/maincon.css'
 import { useTranslation } from 'react-i18next'
 import { sticker, gun_skin, key_charm, patch, musickit, medal, agent, gloves, knife } from '../utils/item_json'
 import { useEffect, useState } from 'react'
+import { gsap } from 'gsap'
 
 import Itemcard from './Itemcard'
 import BasicInput from './BasicInput'
@@ -19,8 +20,9 @@ export default function MainContainer() {
 
    const handleValueChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
       setValue(e.target.value);
-      if (e.target.value === 'gun_skin')
+      if (e.target.value === 'gun_skin'){
          setSeries('weapon_ak47');
+      }
       else if (e.target.value === 'knife')
          setSeries('weapon_knife_push');
       else if (e.target.value === 'gloves')
@@ -47,15 +49,9 @@ export default function MainContainer() {
    const CardClick = (catgory:string,cardId: string, index: string) => {
       if (activeCardId === cardId) {
          setActiveCardId(null);
-         setIsCraftVisible(false);
       } else {
          setActiveCardId(cardId);
          console.log("catgory:",catgory,"CardId:", cardId, "Index:", index);
-         if(catgory === 'gun_skin' || catgory === 'knife' || catgory === 'gloves' || catgory === 'agent'){
-            setIsCraftVisible(true);
-         }else{
-            setIsCraftVisible(false);
-         }
       }
    }
 
@@ -66,6 +62,7 @@ export default function MainContainer() {
    return (
       <div className="main-container">
          <div className="select-panel">
+            {/* Item Select */}
             <select value={value} onChange={handleValueChange} className='select'>
                <option value="gun_skin">{t("Weapons")}</option>
                <option value="knife">{t("Knife")}</option>
@@ -77,6 +74,7 @@ export default function MainContainer() {
                <option value="musickit">{t("MusicKit")}</option>
                <option value="medal">{t("Pins,Cases,Medals,Etc")}</option>
             </select>
+            {/* Series */}
             <select value={series} onChange={handleSeriesChange} className='select select-second' disabled={value === '' || value != 'gun_skin' && value != 'knife' && value != 'gloves' && value != 'sticker'}>
                {
                   value == '' || value != 'gun_skin' && value != 'knife' && value != 'gloves' && value != 'sticker' ? (<option value="">{t("")}</option>) :
@@ -100,7 +98,7 @@ export default function MainContainer() {
                }
             </select>
          </div>
-         <div className='craft-panel'>
+         {/* <div className='craft-panel'>
             <BasicInput />
             <StickerInput />
             <StickerInput />
@@ -108,7 +106,37 @@ export default function MainContainer() {
             <StickerInput />
             <StickerInput />
             <CharmInput />
-         </div>
+         </div> */}
+         {
+            value == '' || value != 'gun_skin' && value != 'knife' && value != 'gloves' && value != 'agent' && value != 'key_charm' ? null : 
+            value == 'gun_skin' ? (
+               <div className='craft-panel'>
+                  <BasicInput value='gun_skin'/>
+                  <StickerInput />
+                  <StickerInput />
+                  <StickerInput />
+                  <StickerInput />
+                  <StickerInput />
+                  <CharmInput />
+               </div>
+            ) : value == 'knife' ? (
+               <div className='craft-panel'>
+                  <BasicInput value='knife'/>
+               </div>
+            ): value == 'gloves' ? (
+               <div className='craft-panel'>
+                  <BasicInput value='gloves'/>
+               </div>
+            ): value == 'agent' ? (
+               <div className='craft-panel'>
+                  
+               </div>
+            ): value == 'key_charm' ? (
+               <div className='craft-panel'>
+                  <BasicInput value='key_charm'/>
+               </div>
+            ): null
+         }
          <div className='item-container'>
             <div className='item-panel-container'>
                <input type="text" value={filter} onChange={(e) => setFilter(e.target.value)} className='item-search' />

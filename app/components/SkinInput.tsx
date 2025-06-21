@@ -9,7 +9,6 @@ export default function StickerInput() {
    const [gunIndex, setgunIndex] = useState('0');
    const [skinIndex, setskinIndex] = useState('0');
    const [nameTag, setNameTag] = useState('');
-   const [statTrak, setStatTrak] = useState(false);
    const [statTrakCount, setStatTrakCount] = useState('');
    const [pattern, setPattern] = useState('0');
    const [wear, setWear] = useState('');
@@ -38,13 +37,12 @@ export default function StickerInput() {
    };
    const handleSubmit = (e: React.FormEvent) => {
       e.preventDefault();
-      postInspectData(itemId, rarity,gunIndex, skinIndex, nameTag, statTrak, statTrakCount, pattern, wear, musicIndex, entIndex, petIndex, charm, stickers);
+      postInspectData(itemId, rarity,gunIndex, skinIndex, nameTag, statTrakCount, pattern, wear, musicIndex, entIndex, petIndex, charm, stickers);
       console.log({
          itemId,
          rarity,
          gunIndex,
          skinIndex,
-         statTrak,
          statTrakCount,
          pattern,
          wear,
@@ -77,10 +75,6 @@ export default function StickerInput() {
          <div>
             <label>Name Tag:</label>
             <input value={nameTag} onChange={(e) => setNameTag(e.target.value)} />
-         </div>
-         <div>
-            <label>StatTrak:</label>
-            <input type="checkbox" onChange={(e) => setStatTrak(e.target.checked)} />
          </div>
          <div>
             <label>StatTrak Count:</label>
