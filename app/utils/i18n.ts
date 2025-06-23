@@ -124,6 +124,9 @@ const resources = {
       "Wear ":"磨损",
       "Pattern":"模板",
       "HightLight":"高光ID",
+      "Inspect Command":"检视指令",
+      "Generate":"生成",
+      "Server Inspect Command":"服务器检视指令",
     }
   }
 };

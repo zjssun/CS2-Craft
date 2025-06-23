@@ -16,7 +16,8 @@ export default function MainContainer() {
    const [series, setSeries] = useState('weapon_ak47');
    const [filter, setFilter] = useState('');
    const [activeCardId, setActiveCardId] = useState<string | null>(null);
-   const [isCraftVisible, setIsCraftVisible] = useState(false);
+   const [genCode, setGenCode] = useState('');
+   const [serverCode, setServerCode] = useState('');
 
    const handleValueChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
       setValue(e.target.value);
@@ -98,15 +99,6 @@ export default function MainContainer() {
                }
             </select>
          </div>
-         {/* <div className='craft-panel'>
-            <BasicInput />
-            <StickerInput />
-            <StickerInput />
-            <StickerInput />
-            <StickerInput />
-            <StickerInput />
-            <CharmInput />
-         </div> */}
          {
             value == '' || value != 'gun_skin' && value != 'knife' && value != 'gloves' && value != 'agent' && value != 'key_charm' ? null : 
             value == 'gun_skin' ? (
@@ -140,6 +132,9 @@ export default function MainContainer() {
          <div className='item-container'>
             <div className='item-panel-container'>
                <input type="text" value={filter} onChange={(e) => setFilter(e.target.value)} className='item-search' />
+               <input type="text" disabled className='gen-code' value={genCode} placeholder={t("Inspect Command")}/>
+               <input type="text" disabled className='gen-code' value={serverCode} placeholder={t("Server Inspect Command")}/>
+               <button className='gen-button'>{t("Generate")}</button>
             </div>
             <div className='item-list'>
                {
