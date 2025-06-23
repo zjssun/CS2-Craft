@@ -14,3 +14,10 @@ export interface Charm{
    z: string;
    highlight:string;
 }
+
+export interface BasicInputData{
+   nameTag:string,
+   statTrakCount:string,
+   pattern:string,
+   wear:string
+}

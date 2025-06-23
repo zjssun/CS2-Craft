@@ -2,6 +2,7 @@ import '../css/maincon.css'
 import { useTranslation } from 'react-i18next'
 import { sticker, gun_skin, key_charm, patch, musickit, medal, agent, gloves, knife } from '../utils/item_json'
 import { useEffect, useState } from 'react'
+import type {BasicInputData} from '../utils/modleType'
 import { gsap } from 'gsap'
 
 import Itemcard from './Itemcard'
@@ -18,6 +19,11 @@ export default function MainContainer() {
    const [activeCardId, setActiveCardId] = useState<string | null>(null);
    const [genCode, setGenCode] = useState('');
    const [serverCode, setServerCode] = useState('');
+   // receive from BasicInput
+   const [nameTag, setNameTag] = useState('');
+   const [statTrakCount, setStatTrakCount] = useState('');
+   const [pattern, setPattern] = useState('0');
+   const [wear, setWear] = useState('0');
 
    const handleValueChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
       setValue(e.target.value);
@@ -55,9 +61,17 @@ export default function MainContainer() {
          console.log("catgory:",catgory,"CardId:", cardId, "Index:", index);
       }
    }
+   // BasicInput Data Handle
+   const handleBasicInputData = (BasicInputData:BasicInputData) =>{
+      console.log('父组件实时接收到数据:', BasicInputData);
+      setNameTag(BasicInputData.nameTag);
+      setStatTrakCount(BasicInputData.statTrakCount);
+      setPattern(BasicInputData.pattern);
+      setWear(BasicInputData.wear);
+   }
 
    useEffect(() => {
-
+      
    }, []);
 
    return (
@@ -103,7 +117,7 @@ export default function MainContainer() {
             value == '' || value != 'gun_skin' && value != 'knife' && value != 'gloves' && value != 'agent' && value != 'key_charm' ? null : 
             value == 'gun_skin' ? (
                <div className='craft-panel'>
-                  <BasicInput value='gun_skin'/>
+                  <BasicInput value='gun_skin' handleBasicInputData={handleBasicInputData}/>
                   <StickerInput />
                   <StickerInput />
                   <StickerInput />
@@ -113,11 +127,11 @@ export default function MainContainer() {
                </div>
             ) : value == 'knife' ? (
                <div className='craft-panel'>
-                  <BasicInput value='knife'/>
+                  <BasicInput value='knife' handleBasicInputData={handleBasicInputData}/>
                </div>
             ): value == 'gloves' ? (
                <div className='craft-panel'>
-                  <BasicInput value='gloves'/>
+                  <BasicInput value='gloves' handleBasicInputData={handleBasicInputData}/>
                </div>
             ): value == 'agent' ? (
                <div className='craft-panel'>
@@ -125,7 +139,7 @@ export default function MainContainer() {
                </div>
             ): value == 'key_charm' ? (
                <div className='craft-panel'>
-                  <BasicInput value='key_charm'/>
+                  <BasicInput value='key_charm' handleBasicInputData={handleBasicInputData}/>
                </div>
             ): null
          }
