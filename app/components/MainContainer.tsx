@@ -2,7 +2,7 @@ import '../css/maincon.css'
 import { useTranslation } from 'react-i18next'
 import { sticker, gun_skin, key_charm, patch, musickit, medal, agent, gloves, knife } from '../utils/item_json'
 import { useEffect, useState } from 'react'
-import type {BasicInputData} from '../utils/modleType'
+import type {BasicInputData,Charm} from '../utils/modleType'
 import { gsap } from 'gsap'
 
 import Itemcard from './Itemcard'
@@ -13,8 +13,11 @@ import CharmInput from './CharmInput'
 
 export default function MainContainer() {
    const { t } = useTranslation();
+   // Main Category Value
    const [value, setValue] = useState('gun_skin');
+   // Subcategory Value
    const [series, setSeries] = useState('weapon_ak47');
+   // Search filter
    const [filter, setFilter] = useState('');
    const [activeCardId, setActiveCardId] = useState<string | null>(null);
    const [genCode, setGenCode] = useState('');
@@ -24,6 +27,10 @@ export default function MainContainer() {
    const [statTrakCount, setStatTrakCount] = useState('');
    const [pattern, setPattern] = useState('0');
    const [wear, setWear] = useState('0');
+   // keycharm
+   const [charm, setCharm] = useState<Charm>(
+      { name: '',pattern:'', x: '',z: '',highlight:'' }
+   );
 
    const handleValueChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
       setValue(e.target.value);
@@ -63,16 +70,20 @@ export default function MainContainer() {
    }
    // BasicInput Data Handle
    const handleBasicInputData = (BasicInputData:BasicInputData) =>{
-      console.log('父组件实时接收到数据:', BasicInputData);
-      setNameTag(BasicInputData.nameTag);
-      setStatTrakCount(BasicInputData.statTrakCount);
-      setPattern(BasicInputData.pattern);
-      setWear(BasicInputData.wear);
+      // console.log('父组件实时接收到数据:', BasicInputData);
+      if(value != 'key_charm'){
+         setNameTag(BasicInputData.nameTag);
+         setStatTrakCount(BasicInputData.statTrakCount);
+         setPattern(BasicInputData.pattern);
+         setWear(BasicInputData.wear);
+      }else{
+         setCharm({...charm,pattern:BasicInputData.pattern,highlight:BasicInputData.highlight});
+      }
    }
 
    useEffect(() => {
-      
-   }, []);
+      console.log(nameTag,statTrakCount,pattern,wear,charm);
+   }, [nameTag,statTrakCount,pattern,wear,charm]);
 
    return (
       <div className="main-container">

@@ -19,5 +19,6 @@ export interface BasicInputData{
    nameTag:string,
    statTrakCount:string,
    pattern:string,
-   wear:string
+   wear:string,
+   highlight:string,
 }
