@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { sticker, gun_skin, key_charm, patch, musickit, medal, agent, gloves, knife } from '../utils/item_json'
 import { useEffect, useState } from 'react'
 import type {BasicInputData,Charm} from '../utils/modleType'
+import {getRarity} from '../utils/tools';
 import { gsap } from 'gsap'
 
 import Itemcard from './Itemcard'
@@ -22,6 +23,11 @@ export default function MainContainer() {
    const [activeCardId, setActiveCardId] = useState<string | null>(null);
    const [genCode, setGenCode] = useState('');
    const [serverCode, setServerCode] = useState('');
+   // receive from ItemCard
+   const [itemId, setitemId] = useState('0');
+   const [rarity, setRarity] = useState('99');
+   const [gunIndex, setgunIndex] = useState('0');
+   const [skinIndex, setskinIndex] = useState('0');
    // receive from BasicInput
    const [nameTag, setNameTag] = useState('');
    const [statTrakCount, setStatTrakCount] = useState('');
@@ -60,12 +66,14 @@ export default function MainContainer() {
       setSeries(e.target.value);
    }
    // ItemCard Click Handle
-   const CardClick = (catgory:string,cardId: string, index: string) => {
+   const CardClick = (catgory:string,cardId: string, index: string,rarity:string) => {
       if (activeCardId === cardId) {
          setActiveCardId(null);
       } else {
          setActiveCardId(cardId);
-         console.log("catgory:",catgory,"CardId:", cardId, "Index:", index);
+         setRarity(getRarity(rarity,catgory));
+         setskinIndex(cardId);
+         console.log("catgory:",catgory,"CardId:", cardId, "Index:", index,"Rarity:",rarity);
       }
    }
    // BasicInput Data Handle

@@ -1,3 +1,5 @@
+import {rarity_ids,rarity_agent,rarity_sticker_rarity} from '../utils/item_json';
+
 export function truncate(str:string, maxLength = 15) {
   if (typeof str !== 'string') return '';
   return str.length > maxLength ? str.slice(0, maxLength) + '...' : str;
@@ -26,5 +28,16 @@ export function rarityToColor(rarity:String){
     case 'Exceptional': return '#d32de6';
     case 'Master': return '#eb4c4c';
     default: return '#FFFFFF';
+  }
+}
+
+export function getRarity(rarity:string,catgory:string):string{
+  if(catgory=='gun_skin' || catgory=='knife' || catgory=='gloves'){
+    return Object.keys(rarity_ids).find(key=>rarity_ids[key as keyof typeof rarity_ids] === rarity) ?? "";
+  }
+  else if(catgory=='sticker' || catgory=='patch' || catgory=='musickit' || catgory=="medal"){
+    return Object.keys(rarity_sticker_rarity).find(key=>rarity_sticker_rarity[key as keyof typeof rarity_sticker_rarity] === rarity) ?? "";
+  }else{
+    return Object.keys(rarity_agent).find(key=>rarity_agent[key as keyof typeof rarity_agent] === rarity) ?? "";
   }
 }

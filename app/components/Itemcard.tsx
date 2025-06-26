@@ -10,7 +10,7 @@ interface Props{
    rarity:string,
    thumbnail:string,
    isActicet:boolean,
-   CardClick:(category:string,id:string,index:string)=>void
+   CardClick:(category:string,id:string,index:string,rarity:string)=>void
 }
 
 export default function Itemcard({category,index,name,id,rarity,thumbnail,CardClick,isActicet}:Props){
@@ -29,7 +29,7 @@ export default function Itemcard({category,index,name,id,rarity,thumbnail,CardCl
    },[])
    
    return(
-      <div className={`Itemcard ${isActicet ? 'active' : ''}`} onClick={()=>CardClick(category,id,index)}>
+      <div className={`Itemcard ${isActicet ? 'active' : ''}`} onClick={()=>CardClick(category,id,index,rarity)}>
          <div className="card-title">
             <p ref={pRef}>{truncate(name)}</p>
             <div className="rarity" style={{width:`${rarityWidth}px`,backgroundColor:`${rarityToColor(rarity)}`}}></div>
