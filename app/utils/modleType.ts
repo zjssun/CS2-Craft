@@ -7,6 +7,10 @@ export interface Sticker{
    slot: string;
 };
 
+export interface StickerState extends Sticker{
+   isActive: boolean;
+}
+
 export interface Charm{
    name: string;
    pattern: string;

@@ -2,7 +2,7 @@ import '../css/maincon.css'
 import { useTranslation } from 'react-i18next'
 import { sticker, gun_skin, key_charm, patch, musickit, medal, agent, gloves, knife } from '../utils/item_json'
 import { useEffect, useState } from 'react'
-import type {BasicInputData,Charm} from '../utils/modleType'
+import type {BasicInputData,Charm, Sticker} from '../utils/modleType'
 import {getRarity} from '../utils/tools';
 import { gsap } from 'gsap'
 
@@ -13,14 +13,14 @@ import CharmInput from './CharmInput'
 
 // sticker
 const STICKER_DEFAULTS = [
-   { slot: '0', rotation: '', x: '', y: '', wear: '' },
-   { slot: '1', rotation: '', x: '', y: '', wear: '' },
-   { slot: '2', rotation: '', x: '', y: '', wear: '' },
-   { slot: '3', rotation: '', x: '', y: '', wear: '' },
-   { slot: '0', rotation: '', x: '0.113', y: '0.035', wear: '' }
+   { name:'', slot: '0', rotation: '', x: '', y: '', wear: '' },
+   { name:'', slot: '1', rotation: '', x: '', y: '', wear: '' },
+   { name:'', slot: '2', rotation: '', x: '', y: '', wear: '' },
+   { name:'', slot: '3', rotation: '', x: '', y: '', wear: '' },
+   { name:'', slot: '0', rotation: '', x: '0.113', y: '0.035', wear: '' }
 ];
 const EMPTY_STICKER_STATE = {
-   slot: '', rotation: '', x: '', y: '', wear: '', isActive: false
+   name:'', slot: '', rotation: '', x: '', y: '', wear: '', isActive: false
 };
 
 export default function MainContainer() {
@@ -116,8 +116,8 @@ export default function MainContainer() {
       setStickerInputs(newStickerInputs);
    }
    // StickerInput Data Handle
-   const handleStickerDataChange = (index:number,fieldName:string,value:string)=>{
-      const newStickerInputs = stickerInputs.map((sticker:string,i:number) =>{
+   const handleStickerDataChange = (index:number,fieldName:keyof Sticker,value:string)=>{
+      const newStickerInputs = stickerInputs.map((sticker,i) =>{
          if(i === index){
             return {...sticker, [fieldName]:value};
          }
@@ -174,11 +174,17 @@ export default function MainContainer() {
             value == 'gun_skin' ? (
                <div className='craft-panel'>
                   <BasicInput value='gun_skin' handleBasicInputData={handleBasicInputData}/>
-                  <StickerInput />
-                  <StickerInput />
-                  <StickerInput />
-                  <StickerInput />
-                  <StickerInput />
+                  {
+                     stickerInputs.map((sticker,index)=>(
+                        <StickerInput 
+                           key={index}
+                           index={index}
+                           data={sticker}
+                           handleStickerToggle={handleStickerToggle}
+                           handleStickerDataChange={handleStickerDataChange}
+                        />
+                     ))
+                  }
                   <CharmInput />
                </div>
             ) : value == 'knife' ? (
