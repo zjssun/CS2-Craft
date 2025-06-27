@@ -11,6 +11,17 @@ import BasicInput from './BasicInput'
 import StickerInput from './StickerInput'
 import CharmInput from './CharmInput'
 
+// sticker
+const STICKER_DEFAULTS = [
+   { slot: '0', rotation: '', x: '', y: '', wear: '' },
+   { slot: '1', rotation: '', x: '', y: '', wear: '' },
+   { slot: '2', rotation: '', x: '', y: '', wear: '' },
+   { slot: '3', rotation: '', x: '', y: '', wear: '' },
+   { slot: '0', rotation: '', x: '0.113', y: '0.035', wear: '' }
+];
+const EMPTY_STICKER_STATE = {
+   slot: '', rotation: '', x: '', y: '', wear: '', isActive: false
+};
 
 export default function MainContainer() {
    const { t } = useTranslation();
@@ -37,6 +48,10 @@ export default function MainContainer() {
    const [charm, setCharm] = useState<Charm>(
       { name: '',pattern:'', x: '',z: '',highlight:'' }
    );
+   // Sticker
+   const [stickerInputs, setStickerInputs] = useState(
+        Array(5).fill(null).map(() => ({ ...EMPTY_STICKER_STATE }))
+    );
 
    const handleValueChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
       setValue(e.target.value);
@@ -88,6 +103,28 @@ export default function MainContainer() {
          setCharm({...charm,pattern:BasicInputData.pattern,highlight:BasicInputData.highlight});
       }
    }
+   // StickerInput Toggle Activity
+   const handleStickerToggle = (index:number)=>{
+      const newStickerInputs = [...stickerInputs];
+      const currentSticker = newStickerInputs[index];
+      const isNowActive = !currentSticker.isActive;
+      if(isNowActive){
+         newStickerInputs[index] = {...STICKER_DEFAULTS[index], isActive: true};
+      }else{
+         newStickerInputs[index] = {...EMPTY_STICKER_STATE};
+      }
+      setStickerInputs(newStickerInputs);
+   }
+   // StickerInput Data Handle
+   const handleStickerDataChange = (index:number,fieldName:string,value:string)=>{
+      const newStickerInputs = stickerInputs.map((sticker:string,i:number) =>{
+         if(i === index){
+            return {...sticker, [fieldName]:value};
+         }
+         return sticker;
+      })
+   }
+   
 
    useEffect(() => {
       console.log(nameTag,statTrakCount,pattern,wear,charm);
