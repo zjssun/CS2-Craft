@@ -122,7 +122,8 @@ export default function MainContainer() {
             return {...sticker, [fieldName]:value};
          }
          return sticker;
-      })
+      });
+      setStickerInputs(newStickerInputs);
    }
    
 
