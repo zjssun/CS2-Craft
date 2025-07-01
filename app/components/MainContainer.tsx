@@ -2,8 +2,8 @@ import '../css/maincon.css'
 import { useTranslation } from 'react-i18next'
 import { sticker, gun_skin, key_charm, patch, musickit, medal, agent, gloves, knife } from '../utils/item_json'
 import { useEffect, useState } from 'react'
-import type {BasicInputData,Charm, Sticker,StickerInfo,StickerState} from '../utils/modleType'
-import {getRarity} from '../utils/tools';
+import type { BasicInputData, Charm, Sticker, StickerInfo, StickerState } from '../utils/modleType'
+import { getRarity } from '../utils/tools';
 import { gsap } from 'gsap'
 
 import Itemcard from './Itemcard'
@@ -14,15 +14,15 @@ import StickerPicker from './StickerPicker'
 
 // sticker
 const STICKER_DEFAULTS = [
-   { name:'', slot: '0', rotation: '', x: '', y: '', wear: '' },
-   { name:'', slot: '1', rotation: '', x: '', y: '', wear: '' },
-   { name:'', slot: '2', rotation: '', x: '', y: '', wear: '' },
-   { name:'', slot: '3', rotation: '', x: '', y: '', wear: '' },
-   { name:'', slot: '0', rotation: '', x: '0.113', y: '0.035', wear: '' }
+   { name: '', slot: '0', rotation: '', x: '', y: '', wear: '' },
+   { name: '', slot: '1', rotation: '', x: '', y: '', wear: '' },
+   { name: '', slot: '2', rotation: '', x: '', y: '', wear: '' },
+   { name: '', slot: '3', rotation: '', x: '', y: '', wear: '' },
+   { name: '', slot: '0', rotation: '', x: '0.113', y: '0.035', wear: '' }
 ];
 const EMPTY_STICKER_STATE = {
-   name:'', slot: '', rotation: '', x: '', y: '', wear: '', isActive: false,
-   id:undefined, thumbnail:undefined
+   name: '', slot: '', rotation: '', x: '', y: '', wear: '', isActive: false,
+   id: undefined, thumbnail: undefined
 };
 
 export default function MainContainer() {
@@ -48,21 +48,21 @@ export default function MainContainer() {
    const [wear, setWear] = useState('0');
    // keycharm
    const [charm, setCharm] = useState<Charm>(
-      { name: '',pattern:'', x: '',z: '',highlight:'' }
+      { name: '', pattern: '', x: '', z: '', highlight: '' }
    );
    // Sticker
    const [stickerInputs, setStickerInputs] = useState<StickerState[]>(
-        Array(5).fill(null).map(() => ({ ...EMPTY_STICKER_STATE }))
-    );
-    // Sticker Picker Status
-    const [modalState, setModalState] = useState<{ isOpen: boolean; editingIndex: number | null }>({
-        isOpen: false,
-        editingIndex: null,
-    });
+      Array(5).fill(null).map(() => ({ ...EMPTY_STICKER_STATE }))
+   );
+   // Sticker Picker Status
+   const [modalState, setModalState] = useState<{ isOpen: boolean; editingIndex: number | null }>({
+      isOpen: false,
+      editingIndex: null,
+   });
 
    const handleValueChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
       setValue(e.target.value);
-      if (e.target.value === 'gun_skin'){
+      if (e.target.value === 'gun_skin') {
          setSeries('weapon_ak47');
       }
       else if (e.target.value === 'knife')
@@ -87,54 +87,57 @@ export default function MainContainer() {
    const handleSeriesChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
       setSeries(e.target.value);
    }
+
    // ItemCard Click Handle
-   const CardClick = (catgory:string,cardId: string, index: string,rarity:string) => {
+   const CardClick = (catgory: string, cardId: string, index: string, rarity: string) => {
       if (activeCardId === cardId) {
          setActiveCardId(null);
       } else {
          setActiveCardId(cardId);
-         setRarity(getRarity(rarity,catgory));
+         setRarity(getRarity(rarity, catgory));
          setskinIndex(cardId);
-         console.log("catgory:",catgory,"CardId:", cardId, "Index:", index,"Rarity:",rarity);
+         console.log("catgory:", catgory, "CardId:", cardId, "Index:", index, "Rarity:", rarity);
       }
    }
+
    // BasicInput Data Handle
-   const handleBasicInputData = (BasicInputData:BasicInputData) =>{
+   const handleBasicInputData = (BasicInputData: BasicInputData) => {
       // console.log('父组件实时接收到数据:', BasicInputData);
-      if(value != 'key_charm'){
+      if (value != 'key_charm') {
          setNameTag(BasicInputData.nameTag);
          setStatTrakCount(BasicInputData.statTrakCount);
          setPattern(BasicInputData.pattern);
          setWear(BasicInputData.wear);
-      }else{
-         setCharm({...charm,pattern:BasicInputData.pattern,highlight:BasicInputData.highlight});
+      } else {
+         setCharm({ ...charm, pattern: BasicInputData.pattern, highlight: BasicInputData.highlight });
       }
    }
-   // StickerInput Toggle Activity
-   // const handleStickerToggle = (index:number)=>{
-   //    const newStickerInputs = [...stickerInputs];
-   //    const currentSticker = newStickerInputs[index];
-   //    const isNowActive = !currentSticker.isActive;
-   //    if(isNowActive){
-   //       newStickerInputs[index] = {...STICKER_DEFAULTS[index], isActive: true};
-   //    }else{
-   //       newStickerInputs[index] = {...EMPTY_STICKER_STATE};
-   //    }
-   //    setStickerInputs(newStickerInputs);
-   // }
+
    // StickerInput Data Handle
-   const handleStickerDataChange = (index:number,fieldName:keyof Sticker,value:string)=>{
-      const newStickerInputs = stickerInputs.map((sticker,i) =>{
-         if(i === index){
-            return {...sticker, [fieldName]:value};
+   const handleStickerDataChange = (index: number, fieldName: keyof Sticker, value: string) => {
+      const newStickerInputs = stickerInputs.map((sticker, i) => {
+         if (i === index) {
+            return { ...sticker, [fieldName]: value };
          }
          return sticker;
       });
       setStickerInputs(newStickerInputs);
    }
 
+   // Clear StickerInput
+   const handleStickerClear = (index: number) => {
+      const newStickerInputs = stickerInputs.map((sticker, i) => {
+         if (i === index) {
+            // 直接重置为初始的空状态
+            return { ...EMPTY_STICKER_STATE };
+         }
+         return sticker;
+      });
+      setStickerInputs(newStickerInputs);
+   };
+
    // Open StickerPicker Modal
-   const handleOpenModal = (index:number) => {
+   const handleOpenModal = (index: number) => {
       setModalState({ isOpen: true, editingIndex: index });
    };
 
@@ -144,15 +147,16 @@ export default function MainContainer() {
    };
 
    // Handle sticker selection from the modal
-   const handleStickerSelect = (selectedSticker: StickerInfo)=>{
+   const handleStickerSelect = (selectedSticker: StickerInfo) => {
       if (modalState.editingIndex === null) return;
-      const newStickerInputs = stickerInputs.map((sticker,i)=>{
-         if(i === modalState.editingIndex){
-            return{
-               ...sticker,
-               isActive: true,
+      const index = modalState.editingIndex;
+      const newStickerInputs = stickerInputs.map((sticker, i) => {
+         if (i === index) {
+            return {
+               ...STICKER_DEFAULTS[index],
                ...selectedSticker,
-               name: selectedSticker.id
+               name: selectedSticker.id,
+               isActive: true
             }
          }
          return sticker;
@@ -161,8 +165,9 @@ export default function MainContainer() {
    }
 
    useEffect(() => {
-      console.log(nameTag,statTrakCount,pattern,wear,charm);
-   }, [nameTag,statTrakCount,pattern,wear,charm]);
+      console.log(nameTag, statTrakCount, pattern, wear, charm);
+      console.log(stickerInputs);
+   }, [nameTag, statTrakCount, pattern, wear, charm, stickerInputs]);
 
    return (
       <div className="main-container">
@@ -204,52 +209,55 @@ export default function MainContainer() {
             </select>
          </div>
          {
-            value == '' || value != 'gun_skin' && value != 'knife' && value != 'gloves' && value != 'agent' && value != 'key_charm' ? null : 
-            value == 'gun_skin' ? (
-               <div className='craft-panel'>
-                  <BasicInput value='gun_skin' handleBasicInputData={handleBasicInputData}/>
-                  {
-                     stickerInputs.map((sticker,index)=>(
-                        <StickerInput 
-                           key={index}
-                           index={index}
-                           data={sticker}
-                           onStickerAreaClick={handleOpenModal}
-                           handleStickerDataChange={handleStickerDataChange}
-                        />
-                     ))
-                  }
-                  <StickerPicker
-                     isOpen={modalState.isOpen}
-                     stickerData={sticker}
-                     onClose={handleCloseModal}
-                     onStickerSelect={handleStickerSelect}
-                  />
-                  <CharmInput />
-               </div>
-            ) : value == 'knife' ? (
-               <div className='craft-panel'>
-                  <BasicInput value='knife' handleBasicInputData={handleBasicInputData}/>
-               </div>
-            ): value == 'gloves' ? (
-               <div className='craft-panel'>
-                  <BasicInput value='gloves' handleBasicInputData={handleBasicInputData}/>
-               </div>
-            ): value == 'agent' ? (
-               <div className='craft-panel'>
-                  
-               </div>
-            ): value == 'key_charm' ? (
-               <div className='craft-panel'>
-                  <BasicInput value='key_charm' handleBasicInputData={handleBasicInputData}/>
-               </div>
-            ): null
+            value == '' || value != 'gun_skin' && value != 'knife' && value != 'gloves' && value != 'agent' && value != 'key_charm' ? null :
+               value == 'gun_skin' ? (
+                  <>
+                     <div className='craft-panel'>
+                        <BasicInput value='gun_skin' handleBasicInputData={handleBasicInputData} />
+                        {
+                           stickerInputs.map((sticker, index) => (
+                              <StickerInput
+                                 key={index}
+                                 index={index}
+                                 data={sticker}
+                                 onStickerAreaClick={handleOpenModal}
+                                 handleStickerClear={handleStickerClear}
+                                 handleStickerDataChange={handleStickerDataChange}
+                              />
+                           ))
+                        }
+                        <CharmInput />
+                     </div>
+                     <StickerPicker
+                        isOpen={modalState.isOpen}
+                        stickerData={sticker}
+                        onClose={handleCloseModal}
+                        onStickerSelect={handleStickerSelect}
+                     />
+                  </>
+               ) : value == 'knife' ? (
+                  <div className='craft-panel'>
+                     <BasicInput value='knife' handleBasicInputData={handleBasicInputData} />
+                  </div>
+               ) : value == 'gloves' ? (
+                  <div className='craft-panel'>
+                     <BasicInput value='gloves' handleBasicInputData={handleBasicInputData} />
+                  </div>
+               ) : value == 'agent' ? (
+                  <div className='craft-panel'>
+
+                  </div>
+               ) : value == 'key_charm' ? (
+                  <div className='craft-panel'>
+                     <BasicInput value='key_charm' handleBasicInputData={handleBasicInputData} />
+                  </div>
+               ) : null
          }
          <div className='item-container'>
             <div className='item-panel-container'>
                <input type="text" value={filter} onChange={(e) => setFilter(e.target.value)} className='item-search' />
-               <input type="text" disabled className='gen-code' value={genCode} placeholder={t("Inspect Command")}/>
-               <input type="text" disabled className='gen-code' value={serverCode} placeholder={t("Server Inspect Command")}/>
+               <input type="text" disabled className='gen-code' value={genCode} placeholder={t("Inspect Command")} />
+               <input type="text" disabled className='gen-code' value={serverCode} placeholder={t("Server Inspect Command")} />
                <button className='gen-button'>{t("Generate")}</button>
             </div>
             <div className='item-list'>

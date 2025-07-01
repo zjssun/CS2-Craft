@@ -1,4 +1,5 @@
 .stickerinput{
+   position: relative;
    padding: 7px;
    width: 150px;
    display: grid; 
@@ -7,7 +8,7 @@
    gap: 0px 10px;
    border: 2px solid var(--card-border-color);
    box-shadow: 4px 4px 0 var(--card-border-color);
-   transition: transform 0.3s ease, box-shadow 0.3s ease;
+   transition: all 0.3s ease;
    justify-items: center;
    align-items: center;
    grid-template-areas: 
@@ -70,4 +71,17 @@
    .stickerinput-plus{
       transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
    }
+}
+.sticker-clear-button{
+   position: absolute;
+    top: 2px;
+    right: 2px;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.2s;
+    color: var(--button-border);
 }
