@@ -1,0 +1,93 @@
+/* src/StickerPickerModal.css */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.modal-header h2 {
+    margin: 0;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.modal-body {
+    padding-top: 15px;
+    overflow-y: auto;
+}
+
+.capsule-selector {
+    margin-bottom: 15px;
+}
+
+.capsule-selector select {
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem;
+}
+
+.sticker-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(128px, 1fr));
+    gap: 15px;
+}
+
+.sticker-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.sticker-item:hover {
+    background-color: #f0f0f0;
+    border-color: #ddd;
+}
+
+.sticker-item img {
+    width: 128px;
+    height: 128px;
+    object-fit: contain;
+}
+
+.sticker-item p {
+    margin-top: 5px;
+    font-size: 12px;
+    text-align: center;
+    word-break: break-word;
+}

@@ -2,7 +2,7 @@ import '../css/maincon.css'
 import { useTranslation } from 'react-i18next'
 import { sticker, gun_skin, key_charm, patch, musickit, medal, agent, gloves, knife } from '../utils/item_json'
 import { useEffect, useState } from 'react'
-import type {BasicInputData,Charm, Sticker} from '../utils/modleType'
+import type {BasicInputData,Charm, Sticker,StickerInfo,StickerState} from '../utils/modleType'
 import {getRarity} from '../utils/tools';
 import { gsap } from 'gsap'
 
@@ -10,6 +10,7 @@ import Itemcard from './Itemcard'
 import BasicInput from './BasicInput'
 import StickerInput from './StickerInput'
 import CharmInput from './CharmInput'
+import StickerPicker from './StickerPicker'
 
 // sticker
 const STICKER_DEFAULTS = [
@@ -20,7 +21,8 @@ const STICKER_DEFAULTS = [
    { name:'', slot: '0', rotation: '', x: '0.113', y: '0.035', wear: '' }
 ];
 const EMPTY_STICKER_STATE = {
-   name:'', slot: '', rotation: '', x: '', y: '', wear: '', isActive: false
+   name:'', slot: '', rotation: '', x: '', y: '', wear: '', isActive: false,
+   id:undefined, thumbnail:undefined
 };
 
 export default function MainContainer() {
@@ -49,9 +51,14 @@ export default function MainContainer() {
       { name: '',pattern:'', x: '',z: '',highlight:'' }
    );
    // Sticker
-   const [stickerInputs, setStickerInputs] = useState(
+   const [stickerInputs, setStickerInputs] = useState<StickerState[]>(
         Array(5).fill(null).map(() => ({ ...EMPTY_STICKER_STATE }))
     );
+    // Sticker Picker Status
+    const [modalState, setModalState] = useState<{ isOpen: boolean; editingIndex: number | null }>({
+        isOpen: false,
+        editingIndex: null,
+    });
 
    const handleValueChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
       setValue(e.target.value);
@@ -104,17 +111,17 @@ export default function MainContainer() {
       }
    }
    // StickerInput Toggle Activity
-   const handleStickerToggle = (index:number)=>{
-      const newStickerInputs = [...stickerInputs];
-      const currentSticker = newStickerInputs[index];
-      const isNowActive = !currentSticker.isActive;
-      if(isNowActive){
-         newStickerInputs[index] = {...STICKER_DEFAULTS[index], isActive: true};
-      }else{
-         newStickerInputs[index] = {...EMPTY_STICKER_STATE};
-      }
-      setStickerInputs(newStickerInputs);
-   }
+   // const handleStickerToggle = (index:number)=>{
+   //    const newStickerInputs = [...stickerInputs];
+   //    const currentSticker = newStickerInputs[index];
+   //    const isNowActive = !currentSticker.isActive;
+   //    if(isNowActive){
+   //       newStickerInputs[index] = {...STICKER_DEFAULTS[index], isActive: true};
+   //    }else{
+   //       newStickerInputs[index] = {...EMPTY_STICKER_STATE};
+   //    }
+   //    setStickerInputs(newStickerInputs);
+   // }
    // StickerInput Data Handle
    const handleStickerDataChange = (index:number,fieldName:keyof Sticker,value:string)=>{
       const newStickerInputs = stickerInputs.map((sticker,i) =>{
@@ -125,7 +132,33 @@ export default function MainContainer() {
       });
       setStickerInputs(newStickerInputs);
    }
-   
+
+   // Open StickerPicker Modal
+   const handleOpenModal = (index:number) => {
+      setModalState({ isOpen: true, editingIndex: index });
+   };
+
+   // Close StickerPicker Modal
+   const handleCloseModal = () => {
+      setModalState({ isOpen: false, editingIndex: null });
+   };
+
+   // Handle sticker selection from the modal
+   const handleStickerSelect = (selectedSticker: StickerInfo)=>{
+      if (modalState.editingIndex === null) return;
+      const newStickerInputs = stickerInputs.map((sticker,i)=>{
+         if(i === modalState.editingIndex){
+            return{
+               ...sticker,
+               isActive: true,
+               ...selectedSticker,
+               name: selectedSticker.id
+            }
+         }
+         return sticker;
+      });
+      setStickerInputs(newStickerInputs);
+   }
 
    useEffect(() => {
       console.log(nameTag,statTrakCount,pattern,wear,charm);
@@ -181,11 +214,17 @@ export default function MainContainer() {
                            key={index}
                            index={index}
                            data={sticker}
-                           handleStickerToggle={handleStickerToggle}
+                           onStickerAreaClick={handleOpenModal}
                            handleStickerDataChange={handleStickerDataChange}
                         />
                      ))
                   }
+                  <StickerPicker
+                     isOpen={modalState.isOpen}
+                     stickerData={sticker}
+                     onClose={handleCloseModal}
+                     onStickerSelect={handleStickerSelect}
+                  />
                   <CharmInput />
                </div>
             ) : value == 'knife' ? (

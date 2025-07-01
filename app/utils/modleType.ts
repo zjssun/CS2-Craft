@@ -5,6 +5,8 @@ export interface Sticker{
    y: string;
    rotation: string;
    slot: string;
+   id?:string;
+   thumbnail?: string;
 };
 
 export interface StickerState extends Sticker{
@@ -26,3 +28,12 @@ export interface BasicInputData{
    wear:string,
    highlight:string,
 }
+
+export interface StickerInfo{
+   name: string;
+   id: string;
+   rarity: string;
+   thumbnail: string;
+}
+
+export type StickerCollection = Record<string, StickerInfo[]>;

@@ -1,3 +1,5 @@
+import type {StickerCollection} from '../utils/modleType'
+
 export const rarity_ids = {
   "0": "Stock",
   "1": "Consumer Grade",
@@ -1545,7 +1547,7 @@ export const gun_skin = {
   ]
 }
 
-export const sticker = {
+export const sticker:StickerCollection = {
   "Warhammer 40,000 Xenos Sticker Capsule": [
     {"name":"Aeldari 2","id":"9430","rarity":"High Grade","thumbnail":"https://i.cs2inspects.com/images/econ/stickers/community/warhammer_decals/paper_aeldari_2_png.png"},
     {"name":"Aeldari 1","id":"9429","rarity":"High Grade","thumbnail":"https://i.cs2inspects.com/images/econ/stickers/community/warhammer_decals/paper_aeldari_1_png.png"},
